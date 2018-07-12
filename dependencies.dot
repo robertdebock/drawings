@@ -8,7 +8,7 @@ digraph hierarchy {
     clamav [fillcolor=orange style=filled]
     cntlm [fillcolor=yellow style=filled]
     dhcpd [fillcolor=yellow style=filled]
-    "digitalocean-agent" [fillcolor=yellow style=filled]
+    "digitalocean_agent" [fillcolor=yellow style=filled]
     dns [fillcolor=yellow style=filled]
     docker [fillcolor=red style=filled]
     dovecot [fillcolor=yellow style=filled]
@@ -29,7 +29,7 @@ digraph hierarchy {
     php [fillcolor=orange style=filled]
     phpmyadmin [fillcolor=purple style=filled]
     postfix [fillcolor=yellow style=filled]
-    "python-pip" [fillcolor=orange style=filled]
+    "python_pip" [fillcolor=orange style=filled]
     revealmd [fillcolor=red style=filled]
     roundcubemail [fillcolor=purple style=filled]
     rsyslog [fillcolor=yellow style=filled]
@@ -37,7 +37,7 @@ digraph hierarchy {
     rundeck [fillcolor=orange style=filled]
     scl [fillcolor=yellow style=filled]
     spamassassin [fillcolor=orange style=filled]
-    "sudo-pair" [fillcolor=orange style=filled]
+    "sudo_pair" [fillcolor=orange style=filled]
     terraform [fillcolor=yellow style=filled]
     tftpd [fillcolor=orange style=filled]
     tomcat [fillcolor=red style=filled]
@@ -45,17 +45,17 @@ digraph hierarchy {
     xinetd [fillcolor=yellow style=filled]
     zabbix [fillcolor=purple style=filled]
   }
-  {at buildtools cntlm dhcpd "digitalocean-agent" dns dovecot epel gotop iptables java mysql mssql ntp postfix rsyslog ruby scl terraform update xinetd} -> bootstrap
-  {clamav fail2ban haveged nginx npm "python-pip" "sudo-pair" zabbix} -> epel
+  {at buildtools cntlm dhcpd "digitalocean_agent" dns dovecot epel gotop iptables java mysql mssql ntp postfix rsyslog ruby scl terraform update xinetd} -> bootstrap
+  {clamav fail2ban haveged nginx npm "python_pip" "sudo_pair" zabbix} -> epel
   postfix -> {spamassassin clamav} [style=dashed]
-  {ara docker httpd} -> "python-pip"
+  {ara docker httpd} -> "python_pip"
   revealmd -> npm
   natrouter -> iptables
   tftpd -> xinetd  [penwidth=3]
   {owncloud phpmyadmin} -> {php mysql}
   {php phpmyadmin roundcubemail zabbix} -> httpd [style=dashed penwidth=3]
   roundcubemail -> php
-  {"python-pip" "sudo-pair"} -> {buildtools}
+  {"sudo_pair"} -> {buildtools}
   {rundeck tomcat} -> java
   tomcat -> haveged
   spamassassin -> rsyslog [penwidth=3]
