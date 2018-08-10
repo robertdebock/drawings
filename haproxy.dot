@@ -3,7 +3,8 @@ digraph PhiloDilemma {
   overlap=false
   {
     bootstrap [fillcolor=green style=filled]
-    mysql [fillcolor=yellow style=filled penwidth=3]
+    haproxy [fillcolor=yellow style=filled penwidth=3]
   }
-  mysql -> bootstrap
+  epel -> bootstrap
+  nginx -> epel
 }
