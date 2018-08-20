@@ -1,0 +1,11 @@
+digraph PhiloDilemma {
+  label = "Robert de Bock" ;
+  overlap=false
+  {
+    bootstrap [fillcolor=green style=filled]
+    "python_pip" [fillcolor=yellow style=filled]
+    awx [fillcolor=orange style=filled penwidth=3]
+  }
+  awx -> "python-pip"
+  "python-pip" -> bootstrap
+}
