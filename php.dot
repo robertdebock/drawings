@@ -3,9 +3,13 @@ digraph PhiloDilemma {
   overlap=false
   {
     bootstrap [fillcolor=green style=filled]
-    httpd [fillcolor=yellow style=filled penwidth=3]
-    php [fillcolor=orange style=filled]
+    buildtools [fillcolor=yellow style=filled]
+    "python_pip" [fillcolor=orange style=filled]
+    httpd [fillcolor=red style=filled]
+    php [fillcolor=purple style=filled penwidth=3]
   }
   php -> httpd [penwidth=3]
-  httpd -> bootstrap
+  httpd -> python_pip
+  python_pip -> buildtools
+  buildtoodl -> bootstrap
 }
