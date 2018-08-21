@@ -3,7 +3,9 @@ digraph PhiloDilemma {
   overlap=false
   {
     bootstrap [fillcolor=green style=filled]
-    cntlm [fillcolor=yellow style=filled penwidth=3]
+    buildtools [fillcolor=yellow style=filled]
+    cntlm [fillcolor=orange style=filled penwidth=3]
   }
-  cntlm -> bootstrap
+  cntlm -> buildtools
+  buildtools -> bootstrap
 }
