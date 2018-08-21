@@ -4,8 +4,9 @@ digraph PhiloDilemma {
   {
     bootstrap [fillcolor=green style=filled]
     epel [fillcolor=yellow style=filled]
+    buildtools [fillcolor=yellow style=filled]
     "python_pip" [fillcolor=orange style=filled penwidth=3]
   }
-  epel -> bootstrap
-  "python_pip" -> epel
+  {buildtools epel} -> bootstrap
+  "python_pip" -> {buildtools epel}
 }
