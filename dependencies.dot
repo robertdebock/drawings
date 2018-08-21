@@ -46,16 +46,16 @@ digraph hierarchy {
     xinetd [fillcolor=yellow style=filled]
     zabbix [fillcolor=purple style=filled]
   }
-  {at buildtools cntlm dhcpd "digitalocean_agent" dns dovecot epel gotop iptables java mysql mssql ntp packer postfix rsyslog ruby scl terraform update xinetd} -> bootstrap
+  {at buildtools dhcpd "digitalocean_agent" dns dovecot epel gotop iptables java mysql mssql ntp packer postfix rsyslog ruby scl terraform update xinetd} -> bootstrap
   {clamav fail2ban haveged nginx npm phpmyadmin "python_pip" "sudo_pair" zabbix} -> epel
   postfix -> {spamassassin clamav} [style=dashed]
   {ara docker httpd} -> "python_pip"
   revealmd -> npm
   natrouter -> iptables
   tftpd -> xinetd  [penwidth=3]
-  {owncloud phpmyadmin} -> {php mysql}
+  {ara owncloud phpmyadmin} -> {buildtools php mysql}
   {php phpmyadmin roundcubemail zabbix} -> httpd [style=dashed penwidth=3]
-  phpmyadmin -> buildtools
+  {cntlm httpd phpmyadmin} -> buildtools
   roundcubemail -> php
   {"sudo_pair"} -> {buildtools}
   {rundeck tomcat} -> java
