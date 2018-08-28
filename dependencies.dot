@@ -3,6 +3,7 @@ digraph hierarchy {
   {
     at [fillcolor=yellow style=filled]
     ara [fillcolor=red style=filled]
+    awx [fillcolor=orange style=filled]
     bootstrap [fillcolor=green style=filled]
     buildtools [fillcolor=yellow style=filled]
     clamav [fillcolor=orange style=filled]
@@ -43,19 +44,20 @@ digraph hierarchy {
     tftpd [fillcolor=orange style=filled]
     tomcat [fillcolor=red style=filled]
     update [fillcolor=yellow style=filled]
+    users [fillcolor=yellow style=filled]
     xinetd [fillcolor=yellow style=filled]
     zabbix [fillcolor=purple style=filled]
   }
-  {at buildtools dhcpd "digitalocean_agent" dns dovecot epel gotop iptables java mysql mssql ntp packer postfix rsyslog ruby scl terraform update xinetd} -> bootstrap
+  {at buildtools dhcpd "digitalocean_agent" dns dovecot epel gotop iptables java mysql mssql ntp packer postfix rsyslog ruby scl terraform update users xinetd} -> bootstrap
   {clamav fail2ban haveged nginx npm phpmyadmin "python_pip" "sudo_pair" zabbix} -> epel
   postfix -> {spamassassin clamav} [style=dashed]
-  {ara docker httpd} -> "python_pip"
+  {ara awx docker httpd} -> "python_pip"
   revealmd -> npm
   natrouter -> iptables
   tftpd -> xinetd  [penwidth=3]
   {ara owncloud phpmyadmin} -> {buildtools php mysql}
   {php phpmyadmin roundcubemail zabbix} -> httpd [style=dashed penwidth=3]
-  {cntlm httpd phpmyadmin} -> buildtools
+  {awx cntlm httpd phpmyadmin "python_pip"} -> buildtools
   roundcubemail -> php
   {"sudo_pair"} -> {buildtools}
   {rundeck tomcat} -> java

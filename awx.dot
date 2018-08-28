@@ -3,9 +3,11 @@ digraph PhiloDilemma {
   overlap=false
   {
     bootstrap [fillcolor=green style=filled]
-    "python_pip" [fillcolor=yellow style=filled]
-    awx [fillcolor=orange style=filled penwidth=3]
+    epel [fillcolor=yellow style=filled]
+    "python_pip" [fillcolor=orange style=filled]
+    awx [fillcolor=red style=filled penwidth=3]
   }
   awx -> "python-pip"
-  "python-pip" -> bootstrap
+  "python-pip" -> {buildtools epel}
+  {buildtools epel} -> bootstrap
 }
