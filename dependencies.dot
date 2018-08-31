@@ -18,7 +18,6 @@ digraph hierarchy {
     gotop [fillcolor=yellow style=filled]
     haveged [fillcolor=orange style=filled]
     httpd [fillcolor=red style=filled]
-    iptables [fillcolor=yellow style=filled]
     java [fillcolor=yellow style=filled]
     mssql [fillcolor=yellow style=filled]
     mysql [fillcolor=yellow style=filled]
@@ -48,12 +47,11 @@ digraph hierarchy {
     xinetd [fillcolor=yellow style=filled]
     zabbix [fillcolor=purple style=filled]
   }
-  {at buildtools dhcpd "digitalocean_agent" dns dovecot epel gotop iptables java mysql mssql ntp packer postfix rsyslog ruby scl terraform update users xinetd} -> bootstrap
+  {at buildtools dhcpd "digitalocean_agent" dns dovecot epel gotop java mysql mssql ntp packer postfix rsyslog ruby scl terraform update users xinetd} -> bootstrap
   {clamav fail2ban haveged nginx npm phpmyadmin "python_pip" "sudo_pair" zabbix} -> epel
   postfix -> {spamassassin clamav} [style=dashed]
   {ara awx docker httpd} -> "python_pip"
   revealmd -> npm
-  natrouter -> iptables
   tftpd -> xinetd  [penwidth=3]
   {ara owncloud phpmyadmin} -> {buildtools php mysql}
   {php phpmyadmin roundcubemail zabbix} -> httpd [style=dashed penwidth=3]
