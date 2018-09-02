@@ -8,6 +8,7 @@ digraph hierarchy {
     buildtools [fillcolor=yellow style=filled]
     clamav [fillcolor=orange style=filled]
     cntlm [fillcolor=yellow style=filled]
+    common [fillcolor=yellow style=filled]
     dhcpd [fillcolor=yellow style=filled]
     "digitalocean_agent" [fillcolor=yellow style=filled]
     dns [fillcolor=yellow style=filled]
@@ -15,6 +16,7 @@ digraph hierarchy {
     dovecot [fillcolor=yellow style=filled]
     epel [fillcolor=yellow style=filled]
     fail2ban [fillcolor=orange style=filled]
+    glusterfs [fillcolor=yellow style=filled]
     gotop [fillcolor=yellow style=filled]
     haveged [fillcolor=orange style=filled]
     httpd [fillcolor=red style=filled]
@@ -47,7 +49,7 @@ digraph hierarchy {
     xinetd [fillcolor=yellow style=filled]
     zabbix [fillcolor=purple style=filled]
   }
-  {at buildtools dhcpd "digitalocean_agent" dns dovecot epel gotop java mysql mssql ntp packer postfix rsyslog ruby scl terraform update users xinetd} -> bootstrap
+  {at buildtools common dhcpd "digitalocean_agent" dns dovecot epel glusterfs gotop java mysql mssql ntp packer postfix rsyslog ruby scl terraform update users xinetd} -> bootstrap
   {clamav fail2ban haveged nginx npm phpmyadmin "python_pip" "sudo_pair" zabbix} -> epel
   postfix -> {spamassassin clamav} [style=dashed]
   {ara awx docker httpd} -> "python_pip"
