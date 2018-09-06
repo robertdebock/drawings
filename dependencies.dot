@@ -7,6 +7,7 @@ digraph hierarchy {
     bootstrap [fillcolor=green style=filled]
     buildtools [fillcolor=yellow style=filled]
     clamav [fillcolor=orange style=filled]
+    cloud9 [fillcolor=red style=filled]
     cntlm [fillcolor=yellow style=filled]
     common [fillcolor=yellow style=filled]
     dhcpd [fillcolor=yellow style=filled]
@@ -51,14 +52,14 @@ digraph hierarchy {
     zabbix [fillcolor=purple style=filled]
   }
   {at buildtools common dhcpd "digitalocean_agent" dns dovecot epel firewall glusterfs gotop java mysql mssql ntp packer postfix rsyslog ruby scl terraform update users xinetd} -> bootstrap
-  {clamav fail2ban haveged nginx npm phpmyadmin "python_pip" "sudo_pair" zabbix} -> epel
+  {clamav cloud9 fail2ban haveged nginx npm phpmyadmin "python_pip" "sudo_pair" zabbix} -> epel
   postfix -> {spamassassin clamav} [style=dashed]
   {ara awx docker httpd} -> "python_pip"
-  revealmd -> npm
+  [cloud9 revealmd] -> npm
   tftpd -> xinetd  [penwidth=3]
   {ara owncloud phpmyadmin} -> {buildtools php mysql}
   {php phpmyadmin roundcubemail zabbix} -> httpd [style=dashed penwidth=3]
-  {awx cntlm httpd phpmyadmin "python_pip"} -> buildtools
+  {awx cntlm cloud9 httpd phpmyadmin "python_pip"} -> buildtools
   roundcubemail -> php
   {"sudo_pair"} -> {buildtools}
   {rundeck tomcat} -> java
