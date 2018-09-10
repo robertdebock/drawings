@@ -23,6 +23,7 @@ digraph hierarchy {
     haveged [fillcolor=orange style=filled]
     httpd [fillcolor=red style=filled]
     java [fillcolor=yellow style=filled]
+    jenkins [fillcolor=orange style=filled]
     mssql [fillcolor=yellow style=filled]
     mysql [fillcolor=yellow style=filled]
     natrouter [fillcolor=orange style=filled]
@@ -62,7 +63,7 @@ digraph hierarchy {
   {awx cntlm cloud9 httpd phpmyadmin "python_pip"} -> buildtools
   roundcubemail -> php
   {"sudo_pair"} -> {buildtools}
-  {rundeck tomcat} -> java
+  {jenkins rundeck tomcat} -> java
   tomcat -> haveged
   spamassassin -> rsyslog [penwidth=3]
 }
