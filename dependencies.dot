@@ -1,6 +1,7 @@
 digraph hierarchy {
   label = "Robert de Bock" ;
   {
+    artifactory [fillcolor=orange style=filled]
     at [fillcolor=yellow style=filled]
     ara [fillcolor=blue style=filled]
     awx [fillcolor=orange style=filled]
@@ -63,7 +64,7 @@ digraph hierarchy {
   {awx cntlm cloud9 httpd phpmyadmin "python_pip"} -> buildtools
   roundcubemail -> php
   {"sudo_pair"} -> {buildtools}
-  {jenkins rundeck tomcat} -> java
+  {artifactory jenkins rundeck tomcat} -> java
   tomcat -> haveged
   spamassassin -> rsyslog [penwidth=3]
 }
