@@ -4,7 +4,7 @@ digraph hierarchy {
     artifactory [fillcolor=orange style=filled]
     at [fillcolor=yellow style=filled]
     ara [fillcolor=blue style=filled]
-    awx [fillcolor=orange style=filled]
+    awx [fillcolor=red style=filled]
     bootstrap [fillcolor=green style=filled]
     buildtools [fillcolor=yellow style=filled]
     clamav [fillcolor=orange style=filled]
@@ -53,7 +53,7 @@ digraph hierarchy {
     xinetd [fillcolor=yellow style=filled]
     zabbix [fillcolor=purple style=filled]
   }
-  {at buildtools common dhcpd "digitalocean_agent" dns dovecot epel firewall glusterfs gotop java mysql mssql ntp packer postfix rsyslog ruby scl terraform update users xinetd} -> bootstrap
+  {at buildtools common dhcpd "digitalocean_agent" dns dovecot epel firewall glusterfs gotop java mysql mssql natrouter ntp packer postfix rsyslog ruby scl terraform update users xinetd} -> bootstrap
   {clamav cloud9 fail2ban haveged nginx npm phpmyadmin "python_pip" "sudo_pair" zabbix} -> epel
   postfix -> {spamassassin clamav} [style=dashed]
   {ara awx docker httpd} -> "python_pip"
