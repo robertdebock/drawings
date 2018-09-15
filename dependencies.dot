@@ -25,6 +25,8 @@ digraph hierarchy {
     httpd [fillcolor=red style=filled]
     java [fillcolor=yellow style=filled]
     jenkins [fillcolor=orange style=filled]
+    mediawiki [fillcolor=purple style=filled]
+    mitogen [fillcolor=red style=filled]
     mssql [fillcolor=yellow style=filled]
     mysql [fillcolor=yellow style=filled]
     natrouter [fillcolor=orange style=filled]
@@ -56,11 +58,12 @@ digraph hierarchy {
   {at buildtools common dhcpd "digitalocean_agent" dns dovecot epel firewall glusterfs gotop java mysql mssql natrouter ntp packer postfix rsyslog ruby scl terraform update users xinetd} -> bootstrap
   {clamav cloud9 fail2ban haveged nginx npm phpmyadmin "python_pip" "sudo_pair" zabbix} -> epel
   postfix -> {spamassassin clamav} [style=dashed]
-  {ara awx docker httpd} -> "python_pip"
+  {ara awx docker httpd mitogen} -> "python_pip"
   {cloud9 revealmd} -> npm
   tftpd -> xinetd  [penwidth=3]
   {ara owncloud phpmyadmin} -> {buildtools php mysql}
   {php phpmyadmin roundcubemail zabbix} -> httpd [style=dashed penwidth=3]
+  mediawiki -> httpd
   {awx cntlm cloud9 httpd phpmyadmin "python_pip"} -> buildtools
   roundcubemail -> php
   {"sudo_pair"} -> {buildtools}
