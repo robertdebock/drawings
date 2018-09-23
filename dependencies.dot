@@ -5,6 +5,7 @@ digraph hierarchy {
     at [fillcolor=yellow style=filled]
     ara [fillcolor=blue style=filled]
     awx [fillcolor=red style=filled]
+    backup [fillcolor=yellow style=filled]
     bootstrap [fillcolor=green style=filled]
     buildtools [fillcolor=yellow style=filled]
     clamav [fillcolor=orange style=filled]
@@ -40,6 +41,8 @@ digraph hierarchy {
     postfix [fillcolor=yellow style=filled]
     "python_pip" [fillcolor=orange style=filled]
     revealmd [fillcolor=red style=filled]
+    release [fillcolor=yellow style=filled]
+    restore [fillcolor=yellow style=filled]
     roundcubemail [fillcolor=blue style=filled]
     rsyslog [fillcolor=yellow style=filled]
     ruby [fillcolor=yellow style=filled]
@@ -55,7 +58,7 @@ digraph hierarchy {
     xinetd [fillcolor=yellow style=filled]
     zabbix [fillcolor=purple style=filled]
   }
-  {at backup buildtools common dhcpd "digitalocean_agent" dns dovecot epel firewall glusterfs gotop java mysql mssql natrouter ntp packer postfix restore rsyslog ruby scl terraform update users xinetd} -> bootstrap
+  {at backup buildtools common dhcpd "digitalocean_agent" dns dovecot epel firewall glusterfs gotop java mysql mssql natrouter ntp packer postfix release restore rsyslog ruby scl terraform update users xinetd} -> bootstrap
   {clamav cloud9 fail2ban haveged nginx npm phpmyadmin "python_pip" "sudo_pair" zabbix} -> epel
   postfix -> {spamassassin clamav} [style=dashed]
   {ara awx docker httpd mitogen} -> "python_pip"
