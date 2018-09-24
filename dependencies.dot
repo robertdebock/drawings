@@ -27,6 +27,7 @@ digraph hierarchy {
     java [fillcolor=yellow style=filled]
     jenkins [fillcolor=orange style=filled]
     mediawiki [fillcolor=purple style=filled]
+    memcached [fillcolor=yellow style=filled]
     mitogen [fillcolor=red style=filled]
     mssql [fillcolor=yellow style=filled]
     mysql [fillcolor=yellow style=filled]
@@ -58,7 +59,7 @@ digraph hierarchy {
     xinetd [fillcolor=yellow style=filled]
     zabbix [fillcolor=purple style=filled]
   }
-  {at backup buildtools common dhcpd "digitalocean_agent" dns dovecot epel firewall glusterfs gotop java mysql mssql natrouter ntp packer postfix release restore rsyslog ruby scl terraform update users xinetd} -> bootstrap
+  {at backup buildtools common dhcpd "digitalocean_agent" dns dovecot epel firewall glusterfs gotop java memcached mysql mssql natrouter ntp packer postfix release restore rsyslog ruby scl terraform update users xinetd} -> bootstrap
   {clamav cloud9 fail2ban haveged nginx npm phpmyadmin "python_pip" "sudo_pair" zabbix} -> epel
   postfix -> {spamassassin clamav} [style=dashed]
   {ara awx docker httpd mitogen} -> "python_pip"
