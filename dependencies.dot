@@ -42,6 +42,7 @@ digraph hierarchy {
     phpmyadmin [fillcolor=blue style=filled]
     postfix [fillcolor=yellow style=filled]
     "python_pip" [fillcolor=orange style=filled]
+    redis [fillcolor=yellow style=filled]
     revealmd [fillcolor=red style=filled]
     release [fillcolor=yellow style=filled]
     restore [fillcolor=yellow style=filled]
@@ -60,7 +61,7 @@ digraph hierarchy {
     xinetd [fillcolor=yellow style=filled]
     zabbix [fillcolor=purple style=filled]
   }
-  {at backup buildtools common dhcpd "digitalocean_agent" dns dovecot epel firewall glusterfs gotop java memcached mysql mssql natrouter ntp packer postfix release restore rsyslog ruby scl terraform update users xinetd} -> bootstrap
+  {at backup buildtools common dhcpd "digitalocean_agent" dns dovecot epel firewall glusterfs gotop java memcached mysql mssql natrouter ntp packer postfix redis release restore rsyslog ruby scl terraform update users xinetd} -> bootstrap
   {clamav cloud9 fail2ban haveged nginx npm phpmyadmin "python_pip" "sudo_pair" zabbix} -> epel
   postfix -> {spamassassin clamav} [style=dashed]
   {ara awx docker httpd mitogen openvas} -> "python_pip"
