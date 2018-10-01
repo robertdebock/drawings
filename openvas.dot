@@ -6,9 +6,10 @@ digraph PhiloDilemma {
     buildtools [fillcolor=yellow style=filled]
     epel [fillcolor=yellow style=filled]
     "python-pip" [fillcolor=orange style=filled]
+    redis [fillcolor=yellow style=filled]
     openvas [fillcolor=red style=filled penwidth=3]
   }
   {buildtools epel} -> bootstrap
   "python-pip" -> {buildtools epel}
-  openvas -> "python-pip"
+  openvas -> {"python-pip" redis}
 }
