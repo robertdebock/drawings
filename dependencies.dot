@@ -43,6 +43,7 @@ digraph hierarchy {
     postfix [fillcolor=yellow style=filled]
     "python_pip" [fillcolor=orange style=filled]
     redis [fillcolor=yellow style=filled]
+    reboot [fillcolor=yellow style=filled]
     revealmd [fillcolor=red style=filled]
     release [fillcolor=yellow style=filled]
     restore [fillcolor=yellow style=filled]
@@ -51,6 +52,7 @@ digraph hierarchy {
     ruby [fillcolor=yellow style=filled]
     rundeck [fillcolor=orange style=filled]
     scl [fillcolor=yellow style=filled]
+    selinux [fillcolor=orange style=filled]
     spamassassin [fillcolor=orange style=filled]
     "sudo_pair" [fillcolor=orange style=filled]
     terraform [fillcolor=yellow style=filled]
@@ -61,8 +63,9 @@ digraph hierarchy {
     xinetd [fillcolor=yellow style=filled]
     zabbix [fillcolor=purple style=filled]
   }
-  {at backup buildtools common dhcpd "digitalocean_agent" dns dovecot epel firewall glusterfs gotop java memcached mysql mssql natrouter ntp packer postfix redis release restore rsyslog ruby scl terraform update users xinetd} -> bootstrap
+  {at backup buildtools common dhcpd "digitalocean_agent" dns dovecot epel firewall glusterfs gotop java memcached mysql mssql natrouter ntp packer postfix reboot redis release restore rsyslog ruby scl terraform update users xinetd} -> bootstrap
   {clamav cloud9 fail2ban haveged nginx npm phpmyadmin "python_pip" "sudo_pair" zabbix} -> epel
+  {common release selinux update} -> reboot
   postfix -> {spamassassin clamav} [style=dashed]
   {ara awx docker httpd mitogen openvas} -> "python_pip"
   openvas -> redis
