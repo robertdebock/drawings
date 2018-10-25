@@ -36,6 +36,7 @@ digraph hierarchy {
     npm [fillcolor=orange style=filled]
     ntp [fillcolor=yellow style=filled]
     openvas [fillcolor=red style=filled]
+    openssh [fillcolor=yellow style=filled]
     owncloud [fillcolor=blue style=filled]
     packer [fillcolor=yellow style=filled]
     php [fillcolor=purple style=filled]
@@ -63,7 +64,7 @@ digraph hierarchy {
     xinetd [fillcolor=yellow style=filled]
     zabbix [fillcolor=purple style=filled]
   }
-  {at backup buildtools common dhcpd "digitalocean_agent" dns dovecot epel firewall glusterfs gotop java memcached mysql mssql natrouter ntp packer postfix reboot redis release restore rsyslog ruby scl terraform update users xinetd} -> bootstrap
+  {at backup buildtools common dhcpd "digitalocean_agent" dns dovecot epel firewall glusterfs gotop java memcached mysql mssql natrouter ntp openssh packer postfix reboot redis release restore rsyslog ruby scl terraform update users xinetd} -> bootstrap
   {clamav cloud9 fail2ban haveged nginx npm phpmyadmin "python_pip" "sudo_pair" zabbix} -> epel
   {common release selinux update} -> reboot
   postfix -> {spamassassin clamav} [style=dashed]
