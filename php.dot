@@ -11,5 +11,5 @@ digraph PhiloDilemma {
   php -> httpd [penwidth=3]
   httpd -> python_pip
   python_pip -> buildtools
-  buildtoodl -> bootstrap
+  buildtools -> bootstrap
 }
