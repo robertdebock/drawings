@@ -1,9 +1,10 @@
 digraph hierarchy {
   label = "Robert de Bock" ;
   {
+    apt_autostart [fillcolor=yellow style=filled]
+    ara [fillcolor=blue style=filled]
     artifactory [fillcolor=orange style=filled]
     at [fillcolor=yellow style=filled]
-    ara [fillcolor=blue style=filled]
     awx [fillcolor=red style=filled]
     backup [fillcolor=yellow style=filled]
     bootstrap [fillcolor=green style=filled]
@@ -65,7 +66,7 @@ digraph hierarchy {
     xinetd [fillcolor=yellow style=filled]
     zabbix [fillcolor=purple style=filled]
   }
-  {at backup buildtools common dhcpd "digitalocean_agent" dns dovecot epel firewall glusterfs gotop java memcached mysql mssql natrouter ntp openssh packer postfix reboot redis release restore rsyslog ruby scl terraform update users xinetd} -> bootstrap
+  {apt_autostart at backup buildtools common dhcpd "digitalocean_agent" dns dovecot epel firewall glusterfs gotop java memcached mysql mssql natrouter ntp openssh packer postfix reboot redis release restore rsyslog ruby scl terraform update users xinetd} -> bootstrap
   {clamav cloud9 fail2ban haveged nginx npm phpmyadmin "python_pip" snort "sudo_pair" zabbix} -> epel
   {common release selinux update} -> reboot
   postfix -> {spamassassin clamav} [style=dashed]
