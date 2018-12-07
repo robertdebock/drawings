@@ -1,0 +1,13 @@
+digraph PhiloDilemma {
+  label = "Robert de Bock" ;
+  overlap=false
+  {
+    bootstrap [fillcolor=green style=filled]
+    git [fillcolor=yellow style=filled]
+    go [fillcolor=yellow style=filled]
+    buildtools [fillcolor=yellow style=filled]
+    vuls [fillcolor=orange style=filled penwidth=3]
+  }
+  {buildtools go git} -> bootstrap
+  vuls -> {buildtools go git}
+}

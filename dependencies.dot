@@ -21,7 +21,9 @@ digraph hierarchy {
     epel [fillcolor=yellow style=filled]
     fail2ban [fillcolor=orange style=filled]
     firewall [fillcolor=yellow style=filled]
+    git [fillcolor=yellow style=filled]
     glusterfs [fillcolor=yellow style=filled]
+    go [fillcolor=yellow style=filled]
     gotop [fillcolor=yellow style=filled]
     haveged [fillcolor=orange style=filled]
     httpd [fillcolor=red style=filled]
@@ -63,22 +65,25 @@ digraph hierarchy {
     tomcat [fillcolor=red style=filled]
     update [fillcolor=yellow style=filled]
     users [fillcolor=yellow style=filled]
+    vuls [fillcolor=orange style=filled]
     xinetd [fillcolor=yellow style=filled]
     zabbix [fillcolor=purple style=filled]
   }
-  {apt_autostart at backup buildtools common dhcpd "digitalocean_agent" dns dovecot epel firewall glusterfs gotop java memcached mysql mssql natrouter ntp openssh packer postfix reboot redis release restore rsyslog ruby scl terraform update users xinetd} -> bootstrap
+  {apt_autostart at backup buildtools common dhcpd "digitalocean_agent" dns dovecot epel firewall git glusterfs go gotop java memcached mysql mssql natrouter ntp openssh packer postfix reboot redis release restore rsyslog ruby scl terraform update users xinetd} -> bootstrap
   {clamav cloud9 fail2ban haveged nginx npm phpmyadmin "python_pip" snort "sudo_pair" zabbix} -> epel
   {common release selinux update} -> reboot
   postfix -> {spamassassin clamav} [style=dashed]
   {ara awx docker httpd mitogen openvas} -> "python_pip"
   openvas -> redis
   {cloud9 revealmd} -> npm
+  vuls -> go
   tftpd -> xinetd  [penwidth=3]
   {ara owncloud phpmyadmin} -> {buildtools php mysql}
   {php phpmyadmin roundcubemail zabbix} -> httpd [style=dashed penwidth=3]
   mediawiki -> httpd
-  {awx cntlm cloud9 httpd phpmyadmin "python_pip"} -> buildtools
+  {awx cntlm cloud9 httpd phpmyadmin "python_pip" vuls} -> buildtools
   roundcubemail -> php
+  {cloud9 irslackd revealmd sudo_pair vuls} -> git
   {"sudo_pair"} -> {buildtools}
   {artifactory jenkins rundeck tomcat} -> java
   tomcat -> haveged
