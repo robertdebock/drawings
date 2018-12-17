@@ -8,7 +8,7 @@ digraph PhiloDilemma {
     git [fillcolor=yellow style=filled]
     irslackd [fillcolor=red style=filled penwidth=3]
   }
-  [epel git] -> bootstrap
+  {epel git} -> bootstrap
   npm -> epel
-  irslackd -> [npm git]
+  irslackd -> {npm git}
 }
