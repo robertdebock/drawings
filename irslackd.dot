@@ -1,0 +1,14 @@
+digraph PhiloDilemma {
+  label = "Robert de Bock" ;
+  overlap=false
+  {
+    bootstrap [fillcolor=green style=filled]
+    epel [fillcolor=yellow style=filled]
+    npm [fillcolor=orange style=filled]
+    git [fillcolor=yellow style=filled]
+    irslackd [fillcolor=red style=filled penwidth=3]
+  }
+  [epel git] -> bootstrap
+  npm -> epel
+  irslackd -> [npm git]
+}

@@ -27,6 +27,8 @@ digraph hierarchy {
     gotop [fillcolor=yellow style=filled]
     haveged [fillcolor=orange style=filled]
     httpd [fillcolor=red style=filled]
+    investigate [fillcolor=yellow style=filled]
+    irslackd [fillcolor=red style=filled]
     java [fillcolor=yellow style=filled]
     jenkins [fillcolor=orange style=filled]
     mediawiki [fillcolor=purple style=filled]
@@ -69,13 +71,13 @@ digraph hierarchy {
     xinetd [fillcolor=yellow style=filled]
     zabbix [fillcolor=purple style=filled]
   }
-  {apt_autostart at backup buildtools common dhcpd "digitalocean_agent" dns dovecot epel firewall git glusterfs go gotop java memcached mysql mssql natrouter ntp openssh packer postfix reboot redis release restore rsyslog ruby scl terraform update users xinetd} -> bootstrap
+  {apt_autostart at backup buildtools common dhcpd "digitalocean_agent" dns dovecot epel firewall git glusterfs go gotop investigate java memcached mysql mssql natrouter ntp openssh packer postfix reboot redis release restore rsyslog ruby scl terraform update users xinetd} -> bootstrap
   {clamav cloud9 fail2ban haveged nginx npm phpmyadmin "python_pip" snort "sudo_pair" zabbix} -> epel
   {common release selinux update} -> reboot
   postfix -> {spamassassin clamav} [style=dashed]
   {ara awx docker httpd mitogen openvas} -> "python_pip"
   openvas -> redis
-  {cloud9 revealmd} -> npm
+  {cloud9 irslackd revealmd} -> npm
   vuls -> go
   tftpd -> xinetd  [penwidth=3]
   {ara owncloud phpmyadmin} -> {buildtools php mysql}
