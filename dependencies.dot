@@ -85,7 +85,7 @@ digraph hierarchy {
   mediawiki -> httpd
   {awx cntlm cloud9 httpd phpmyadmin "python_pip" vuls} -> buildtools
   roundcubemail -> php
-  {cloud9 irslackd revealmd sudo_pair vuls} -> git
+  {cloud9 irslackd lynis revealmd sudo_pair vuls} -> git
   {"sudo_pair"} -> {buildtools}
   {artifactory jenkins rundeck tomcat} -> java
   tomcat -> haveged
