@@ -31,6 +31,7 @@ digraph hierarchy {
     irslackd [fillcolor=red style=filled]
     java [fillcolor=yellow style=filled]
     jenkins [fillcolor=orange style=filled]
+    lynis [fillcolor=oragen style=filled]
     mediawiki [fillcolor=purple style=filled]
     memcached [fillcolor=yellow style=filled]
     mitogen [fillcolor=red style=filled]
