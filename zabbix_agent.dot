@@ -1,0 +1,11 @@
+digraph PhiloDilemma {
+  label = "Robert de Bock" ;
+  overlap=false
+  {
+    bootstrap [fillcolor=green style=filled]
+    zabbix_repository [fillcolor=yellow style=filled]
+    zabbix_agent [fillcolor=orange style=filled penwidth=3]
+  }
+  zabbix_repository -> bootstrap
+  zabbix_agent -> zabbix_repository
+}

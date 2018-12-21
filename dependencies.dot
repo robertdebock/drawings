@@ -71,10 +71,15 @@ digraph hierarchy {
     vuls [fillcolor=orange style=filled]
     xinetd [fillcolor=yellow style=filled]
     zabbix [fillcolor=purple style=filled]
+    zabbix_repository [fillcolor=yellow style=filled]
+    zabbix_agent [fillcolor=orange style=filled]
+    zabbix_server [fillcolor=orange style=filled]
+    zabbix_web [fillcolor=orange style=filled]
   }
-  {apt_autostart at backup buildtools common dhcpd "digitalocean_agent" dns dovecot epel firewall git glusterfs go gotop investigate java memcached mysql mssql natrouter ntp openssh packer postfix reboot redis release restore rsyslog ruby scl terraform update users xinetd} -> bootstrap
+  {apt_autostart at backup buildtools common dhcpd "digitalocean_agent" dns dovecot epel firewall git glusterfs go gotop investigate java memcached mysql mssql natrouter ntp openssh packer postfix reboot redis release restore rsyslog ruby scl terraform update users xinetd zabbix_repository} -> bootstrap
   {clamav cloud9 fail2ban haveged nginx npm phpmyadmin "python_pip" snort "sudo_pair" zabbix} -> epel
   {common release selinux update} -> reboot
+  {zabbix_agent zabbix_server zabbix_web} -> zabbix_repository
   postfix -> {spamassassin clamav} [style=dashed]
   {ara awx docker httpd mitogen openvas} -> "python_pip"
   openvas -> redis
