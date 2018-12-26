@@ -3,7 +3,6 @@ digraph PhiloDilemma {
   overlap=false
   {
     bootstrap [fillcolor=green style=filled]
-    
     epel [fillcolor=yellow style=filled]
     buildtools [fillcolor=yellow style=filled]
     python_pip [fillcolor=orange style=filled]
@@ -12,4 +11,5 @@ digraph PhiloDilemma {
   }
   {buildtools epel zabbix_repository} -> bootstrap
   zabbix_web -> {zabbix_repository python_pip}
+  pyton_pip -> {buildtools epel}
 }
