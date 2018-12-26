@@ -3,9 +3,13 @@ digraph PhiloDilemma {
   overlap=false
   {
     bootstrap [fillcolor=green style=filled]
+    
+    epel [fillcolor=yellow style=filled]
+    buildtools [fillcolor=yellow style=filled]
+    python_pip [fillcolor=orange style=filled]
     zabbix_repository [fillcolor=yellow style=filled]
-    zabbix_web [fillcolor=orange style=filled penwidth=3]
+    zabbix_web [fillcolor=red style=filled penwidth=3]
   }
-  zabbix_repository -> bootstrap
-  zabbix_web -> zabbix_repository
+  {buildtools epel zabbix_repository} -> bootstrap
+  zabbix_web -> {zabbix_repository python_pip}
 }
