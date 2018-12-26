@@ -11,5 +11,5 @@ digraph PhiloDilemma {
   }
   {buildtools epel zabbix_repository} -> bootstrap
   zabbix_web -> {zabbix_repository python_pip}
-  pyton_pip -> {buildtools epel}
+  python_pip -> {buildtools epel}
 }
