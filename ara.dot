@@ -5,10 +5,10 @@ digraph PhiloDilemma {
     bootstrap [fillcolor=green style=filled]
     buildtools [fillcolor=yellow style=filled]
     epel [fillcolor=yellow style=filled]
-    "python-pip" [fillcolor=orange style=filled]
+    "python_pip" [fillcolor=orange style=filled]
     ara [fillcolor=red style=filled penwidth=3]
   }
-  ara -> "python-pip"
-  "python-pip" -> {buildtools epel}
+  ara -> "python_pip"
+  "python_pip" -> {buildtools epel}
   {buildtools epel} -> bootstrap
 }

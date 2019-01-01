@@ -6,14 +6,14 @@ digraph PhiloDilemma {
     buildtools [fillcolor=yellow style=filled]
     epel [fillcolor=yellow style=filled]
     mysql [fillcolor=yellow style=filled]
-    "python-pip" [fillcolor=orange style=filled]
+    "python_pip" [fillcolor=orange style=filled]
     php [fillcolor=orange style=filled]
     httpd [fillcolor=red style=filled]
     phpmyadmin [fillcolor=purple style=filled penwidth=3]
   }
   {buildtools epel mysql php} -> bootstrap
-  "python-pip" -> {buildtools epel}
-  httpd -> "python-pip"
+  "python_pip" -> {buildtools epel}
+  httpd -> "python_pip"
   phpmyadmin -> {mysql php}
   phpmyadmin -> httpd [penwidth=3]
 }
