@@ -75,6 +75,7 @@ digraph hierarchy {
     update [fillcolor=yellow style=filled]
     users [fillcolor=yellow style=filled]
     vuls [fillcolor=orange style=filled]
+    vagrant [fillcolor=red style=filled]
     xinetd [fillcolor=yellow style=filled]
     zabbix [fillcolor=purple style=filled]
     zabbix_repository [fillcolor=yellow style=filled]
@@ -89,7 +90,7 @@ digraph hierarchy {
   {zabbix_agent zabbix_server zabbix_web zabbix_proxy} -> zabbix_repository
   postfix -> {spamassassin clamav} [style=dashed]
   travis -> ruby
-  {ansible_lint ara awx docker httpd mitogen molecule openvas} -> "python_pip"
+  {ansible_lint ara awx docker httpd mitogen molecule openvas vagrant} -> "python_pip"
   openvas -> redis
   {cloud9 irslackd revealmd} -> npm
   vuls -> go
