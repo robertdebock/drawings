@@ -1,6 +1,7 @@
 digraph hierarchy {
   label = "Robert de Bock" ;
   {
+    anaconda [fillcolor=orange style=filled]
     ansible [fillcolor=orange style=filled]
     ansible_lint [fillcolor=red style=filled]
     apt_autostart [fillcolor=yellow style=filled]
@@ -91,7 +92,7 @@ digraph hierarchy {
   {zabbix_agent zabbix_server zabbix_web zabbix_proxy} -> zabbix_repository
   postfix -> {spamassassin clamav} [style=dashed]
   travis -> ruby
-  {ansible_lint ara awx docker httpd mitogen molecule openvas vagrant} -> "python_pip"
+  {anaconda ansible_lint ara awx docker httpd mitogen molecule openvas vagrant} -> "python_pip"
   openvas -> redis
   {cloud9 irslackd revealmd} -> npm
   vuls -> go
