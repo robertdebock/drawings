@@ -1,0 +1,14 @@
+digraph PhiloDilemma {
+  label = "Robert de Bock" ;
+  overlap=false
+  {
+    bootstrap [fillcolor=green style=filled]
+    buildtools [fillcolor=yellow style=filled]
+    epel [fillcolor=yellow style=filled]
+    "python_pip" [fillcolor=orange style=filled]
+    docker_ce [fillcolor=red style=filled penwidth=3]
+  }
+  docker_ce -> "python_pip"
+  "python_pip" -> {buildtools epel}
+  {buildtools epel} -> bootstrap
+}
