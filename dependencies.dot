@@ -1,7 +1,7 @@
 digraph hierarchy {
   label = "Robert de Bock" ;
   {
-    anaconda [fillcolor=orange style=filled]
+    anaconda [fillcolor=red style=filled]
     ansible [fillcolor=orange style=filled]
     ansible_lint [fillcolor=red style=filled]
     apt_autostart [fillcolor=yellow style=filled]
@@ -16,7 +16,7 @@ digraph hierarchy {
     clamav [fillcolor=orange style=filled]
     cloud9 [fillcolor=red style=filled]
     cntlm [fillcolor=yellow style=filled]
-    common [fillcolor=yellow style=filled]
+    common [fillcolor=orange style=filled]
     dhcpd [fillcolor=yellow style=filled]
     "digitalocean_agent" [fillcolor=yellow style=filled]
     dns [fillcolor=yellow style=filled]
@@ -59,7 +59,7 @@ digraph hierarchy {
     redis [fillcolor=yellow style=filled]
     reboot [fillcolor=yellow style=filled]
     revealmd [fillcolor=red style=filled]
-    release [fillcolor=yellow style=filled]
+    release [fillcolor=orange style=filled]
     restore [fillcolor=yellow style=filled]
     roundcubemail [fillcolor=blue style=filled]
     rsyslog [fillcolor=yellow style=filled]
@@ -76,7 +76,7 @@ digraph hierarchy {
     tftpd [fillcolor=orange style=filled]
     tomcat [fillcolor=red style=filled]
     travis [fillcolor=orange style=filled]
-    update [fillcolor=yellow style=filled]
+    update [fillcolor=orange style=filled]
     users [fillcolor=yellow style=filled]
     vuls [fillcolor=orange style=filled]
     vagrant [fillcolor=red style=filled]
