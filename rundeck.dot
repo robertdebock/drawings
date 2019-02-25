@@ -4,8 +4,9 @@ digraph PhiloDilemma {
   {
     bootstrap [fillcolor=green style=filled]
     java [fillcolor=yellow style=filled]
+    service [fillcolor=yellow style=filled]
     rundeck [fillcolor=orange style=filled penwidth=3]
   }
-  java -> bootstrap
-  rundeck -> java
+  {java service} -> bootstrap
+  rundeck -> {java service}
 }

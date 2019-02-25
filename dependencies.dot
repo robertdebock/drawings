@@ -107,6 +107,7 @@ digraph hierarchy {
   {cloud9 irslackd lynis revealmd sudo_pair vuls} -> git
   {"sudo_pair"} -> {buildtools}
   {artifactory jenkins rundeck tomcat} -> java
+  {anaconda artifactor cloud9 cntlm irslackd rundeck tomcat} -> service
   tomcat -> haveged
   spamassassin -> rsyslog [penwidth=3]
 }

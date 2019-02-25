@@ -4,8 +4,9 @@ digraph PhiloDilemma {
   {
     bootstrap [fillcolor=green style=filled]
     buildtools [fillcolor=yellow style=filled]
+    service [fillcolor=yellow style=filled]
     cntlm [fillcolor=orange style=filled penwidth=3]
   }
-  cntlm -> buildtools
-  buildtools -> bootstrap
+  cntlm -> {buildtools service}
+  {buildtools service} -> bootstrap
 }

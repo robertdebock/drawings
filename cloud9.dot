@@ -4,11 +4,12 @@ digraph PhiloDilemma {
   {
     bootstrap [fillcolor=green style=filled]
     buildtools [fillcolor=yellow style=filled]
+    service [fillcolor=yellow style=filled]
     epel [fillcolor=yellow style=filled]
     npm [fillcolor=orange style=filled]
     cloud9 [fillcolor=red style=filled penwidth=3]
   }
-  {buildtools epel} -> bootstrap
+  {buildtools epel service} -> bootstrap
   npm -> epel
-  cloud9 -> npm
+  cloud9 -> {npm service}
 }

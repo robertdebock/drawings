@@ -4,11 +4,12 @@ digraph PhiloDilemma {
   {
     bootstrap [fillcolor=green style=filled]
     epel [fillcolor=yellow style=filled]
+    service [fillcolor=yellow style=filled]
     npm [fillcolor=orange style=filled]
     git [fillcolor=yellow style=filled]
     irslackd [fillcolor=red style=filled penwidth=3]
   }
-  {epel git} -> bootstrap
+  {epel git service} -> bootstrap
   npm -> epel
-  irslackd -> {npm git}
+  irslackd -> {npm git service}
 }

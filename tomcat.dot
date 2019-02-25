@@ -4,12 +4,13 @@ digraph PhiloDilemma {
   {
     bootstrap [fillcolor=green style=filled]
     epel [fillcolor=yellow style=filled]
+    service [fillcolor=yellow style=filled]
     haveged [fillcolor=orange style=filled]
     java [fillcolor=yellow style=filled]
     tomcat [fillcolor=red style=filled penwidth=3]
   }
-  tomcat -> java
+  tomcat -> {java service}
   tomcat -> haveged [style=dashed]
   haveged -> epel
-  {epel java} -> bootstrap
+  {epel java service} -> bootstrap
 }
