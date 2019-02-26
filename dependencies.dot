@@ -71,6 +71,7 @@ digraph hierarchy {
     snort [fillcolor=orange style=filled]
     spamassassin [fillcolor=orange style=filled]
     squid [fillcolor=yellow style=filled]
+    storage [fillcolor=yellow style=filled]
     "sudo_pair" [fillcolor=orange style=filled]
     sysstat [fillcolor=yellow style=filled]
     terraform [fillcolor=yellow style=filled]
@@ -89,7 +90,7 @@ digraph hierarchy {
     zabbix_web [fillcolor=orange style=filled]
     zabbix_proxy [fillcolor=orange style=filled]
   }
-  {ansible apt_autostart at atom backup buildtools common dhcpd "digitalocean_agent" dns dovecot epel firewall git glusterfs go gotop investigate java locale memcached mysql mssql natrouter ntp openssh packer postfix reboot redis release restore rsyslog ruby scl service squid sysstat terraform update users xinetd zabbix_repository} -> bootstrap
+  {ansible apt_autostart at atom backup buildtools common dhcpd "digitalocean_agent" dns dovecot epel firewall git glusterfs go gotop investigate java locale memcached mysql mssql natrouter ntp openssh packer postfix reboot redis release restore rsyslog ruby scl service squid storage sysstat terraform update users xinetd zabbix_repository} -> bootstrap
   {ansible clamav cloud9 fail2ban haveged nginx npm phpmyadmin "python_pip" snort "sudo_pair" zabbix} -> epel
   {common release selinux update} -> reboot
   {zabbix_agent zabbix_server zabbix_web zabbix_proxy} -> zabbix_repository
