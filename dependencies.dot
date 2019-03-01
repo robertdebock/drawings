@@ -44,7 +44,7 @@ digraph hierarchy {
     molecule [fillcolor=red style=filled]
     mssql [fillcolor=yellow style=filled]
     mysql [fillcolor=yellow style=filled]
-    natrouter [fillcolor=orange style=filled]
+    natrouter [fillcolor=yellow style=filled]
     nginx [fillcolor=orange style=filled]
     npm [fillcolor=orange style=filled]
     ntp [fillcolor=yellow style=filled]
