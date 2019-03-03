@@ -3,15 +3,12 @@ digraph PhiloDilemma {
   overlap=false
   {
     bootstrap [fillcolor=green style=filled]
-    buildtools [fillcolor=yellow style=filled]
     service [fillcolor=yellow style=filled]
     epel [fillcolor=yellow style=filled]
-    git [fillcolor=yellow style=filled]
-    local [fillcolor=yellow style=filled]
     npm [fillcolor=orange style=filled]
-    cloud9 [fillcolor=red style=filled penwidth=3]
+    etherpad [fillcolor=red style=filled penwidth=3]
   }
-  {buildtools epel git locale service} -> bootstrap
+  {epel service} -> bootstrap
   npm -> epel
-  cloud9 -> {npm service}
+  etherpad -> {npm service}
 }
