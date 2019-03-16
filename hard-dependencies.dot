@@ -4,26 +4,23 @@ digraph hierarchy {
     ca [fillcolor=green style=filled]
     common [fillcolor=yellow style=filled]
     httpd [fillcolor=green style=filled]
-    openvas [fillcolor=yellow style=filled]
+    openvas [fillcolor=orange style=filled]
     openvpn [fillcolor=yellow style=filled]
     php [fillcolor=yellow style=filled]
     phpmyadmin [fillcolor=yellow style=filled]
     reboot [fillcolor=green style=filled]
-    roundcubemail [fillcolor=yellow style=filled]
-    rsyslog [fillcolor=green style=filled]
+    release [fillcolor=yellow] style=filled]
     selinux [fillcolor=yellow style=filled]
-    service [fillcolor=yellow style=filled]
     spamassassin [fillcolor=yellow style=filled]
     tftpd [fillcolor=yellow style=filled]
     update [fillcolor=yellow style=filled]
     xinetd [fillcolor=green style=filled]
     zabbix [fillcolor=yellow style=filled]
   }
-  {openvpn roundcubemail} -> ca
-  {common selinux update} -> reboot
+  {openvpn} -> ca
+  {common release selinux update} -> reboot
   openvas -> selinux
-  roundcubemail -> php
-  {phpmyadmin roundcubemail zabbix}-> httpd
+  {phpmyadmin zabbix}-> httpd
   spamassassin -> rsyslog
-  tfptd -> xinetd
+  tftpd -> xinetd
 }
