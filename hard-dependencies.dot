@@ -10,6 +10,7 @@ digraph hierarchy {
     phpmyadmin [fillcolor=yellow style=filled]
     reboot [fillcolor=green style=filled]
     release [fillcolor=yellow style=filled]
+    rsyslog [fillcolor=green style=filled]
     selinux [fillcolor=yellow style=filled]
     spamassassin [fillcolor=yellow style=filled]
     tftpd [fillcolor=yellow style=filled]
