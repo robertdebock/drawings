@@ -37,6 +37,7 @@ digraph hierarchy {
     irslackd [fillcolor=red style=filled]
     java [fillcolor=yellow style=filled]
     jenkins [fillcolor=orange style=filled]
+    kernel [fillcolor=orange style=filled]
     locale [fillcolor=yellow style=filled]
     lynis [fillcolor=orange style=filled]
     mediawiki [fillcolor=purple style=filled]
@@ -106,7 +107,7 @@ digraph hierarchy {
   {ara owncloud phpmyadmin} -> {buildtools php mysql}
   {php phpmyadmin roundcubemail zabbix} -> httpd [style=dashed penwidth=3]
   mediawiki -> httpd
-  {awx cntlm cloud9 httpd phpmyadmin "python_pip" vuls} -> buildtools
+  {awx cntlm cloud9 httpd kernel phpmyadmin "python_pip" vuls} -> buildtools
   roundcubemail -> php
   {cloud9 irslackd lynis revealmd sudo_pair vuls} -> git
   {"sudo_pair"} -> {buildtools}
