@@ -25,7 +25,7 @@ digraph hierarchy {
   {openvpn} -> ca
   {common release selinux update} -> reboot
   openvas -> selinux
-  {mediawiki php phpmyadmin roundcubemail zabbix}-> httpd
+  {mediawiki owncloud php phpmyadmin roundcubemail zabbix}-> httpd
   spamassassin -> rsyslog
   tftpd -> xinetd
   zabbix -> mysql
