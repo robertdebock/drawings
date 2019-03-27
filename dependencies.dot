@@ -39,6 +39,7 @@ digraph hierarchy {
     jenkins [fillcolor=orange style=filled]
     kernel [fillcolor=orange style=filled]
     logrotate [fillcolor=yellow style=filled]
+    logwatch [fillcolor=yellow style=filled]
     locale [fillcolor=yellow style=filled]
     lynis [fillcolor=orange style=filled]
     mediawiki [fillcolor=purple style=filled]
@@ -94,7 +95,7 @@ digraph hierarchy {
     zabbix_web [fillcolor=orange style=filled]
     zabbix_proxy [fillcolor=orange style=filled]
   }
-  {ansible apt_autostart at atom backup buildtools common dhcpd "digitalocean_agent" dns dovecot epel firewall git glusterfs go gotop investigate java logrotate locale memcached mysql mssql natrouter ntp openssh packer postfix reboot redis release restore rsyslog ruby scl service sosreport squid storage sysstat terraform update users xinetd zabbix_repository} -> bootstrap
+  {ansible apt_autostart at atom backup buildtools common dhcpd "digitalocean_agent" dns dovecot epel firewall git glusterfs go gotop investigate java logrotate logwatch locale memcached mysql mssql natrouter ntp openssh packer postfix reboot redis release restore rsyslog ruby scl service sosreport squid storage sysstat terraform update users xinetd zabbix_repository} -> bootstrap
   {ansible clamav fail2ban haveged nginx npm phpmyadmin "python_pip" snort "sudo_pair" zabbix} -> epel
   {common release selinux update} -> reboot
   {zabbix_agent zabbix_server zabbix_web zabbix_proxy} -> zabbix_repository
