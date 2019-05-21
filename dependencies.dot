@@ -30,6 +30,7 @@ digraph hierarchy {
     fail2ban [fillcolor=orange style=filled]
     firewall [fillcolor=yellow style=filled]
     git [fillcolor=yellow style=filled]
+    gitlab_runner [fillcolor=yellow style=filled]
     glusterfs [fillcolor=yellow style=filled]
     go [fillcolor=yellow style=filled]
     gotop [fillcolor=yellow style=filled]
@@ -120,4 +121,5 @@ digraph hierarchy {
   {ara anaconda artifactory cloud9 cntlm irslackd rundeck tomcat} -> service
   tomcat -> haveged
   spamassassin -> rsyslog [penwidth=3]
+  gitlab_runner -> update
 }

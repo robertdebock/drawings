@@ -1,0 +1,13 @@
+digraph PhiloDilemma {
+  label = "Robert de Bock" ;
+  overlap=false
+  {
+    bootstrap [fillcolor=green style=filled]
+    update [fillcolor=yellow style=filled]
+    reboot [fillcolor=yellow style=filled]
+    gitlab_runner [fillcolor=orange style=filled penwidth=3]
+  }
+  gitlab_runner -> "update"
+  "update" -> reboot
+  {update reboot} -> bootstrap
+}
