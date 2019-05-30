@@ -1,0 +1,12 @@
+digraph PhiloDilemma {
+  label = "Robert de Bock" ;
+  overlap=false
+  {
+    bootstrap [fillcolor=green style=filled]
+    buildtools [fillcolor=yellow style=filled]
+    service [fillcolor=yellow style=filled]
+    earlyoom [fillcolor=orange style=filled penwidth=3]
+  }
+  earlyoom -> {buildtools service}
+  {buildtools service} -> bootstrap
+}
