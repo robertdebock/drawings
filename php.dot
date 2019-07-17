@@ -7,9 +7,11 @@ digraph PhiloDilemma {
     "python_pip" [fillcolor=orange style=filled]
     httpd [fillcolor=red style=filled]
     php [fillcolor=purple style=filled penwidth=3]
+    remi [fillcolor=yellow style=filled]
   }
   php -> httpd [penwidth=3]
+  php -> remi
   httpd -> python_pip
   python_pip -> buildtools
-  buildtools -> bootstrap
+  {buildtools remi} -> bootstrap
 }

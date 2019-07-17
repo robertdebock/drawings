@@ -118,6 +118,7 @@ digraph hierarchy {
   tftpd -> xinetd  [penwidth=3]
   {ara owncloud phpmyadmin} -> {buildtools php mysql}
   {php phpmyadmin roundcubemail zabbix} -> httpd [style=dashed penwidth=3]
+  php -> remi
   mediawiki -> httpd
   {awx cntlm cloud9 earlyoom httpd kernel phpmyadmin "python_pip" vuls} -> buildtools
   roundcubemail -> php
