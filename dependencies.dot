@@ -38,6 +38,7 @@ digraph hierarchy {
     go [fillcolor=yellow style=filled]
     gotop [fillcolor=yellow style=filled]
     haveged [fillcolor=orange style=filled]
+    haproxy [fillcolor=yellow style=filled]
     httpd [fillcolor=red style=filled]
     investigate [fillcolor=yellow style=filled]
     irslackd [fillcolor=red style=filled]
@@ -65,6 +66,7 @@ digraph hierarchy {
     php [fillcolor=purple style=filled]
     phpmyadmin [fillcolor=blue style=filled]
     postfix [fillcolor=yellow style=filled]
+    postgres [fillcolor=yellow style=filled]
     "python_pip" [fillcolor=orange style=filled]
     redis [fillcolor=yellow style=filled]
     reboot [fillcolor=yellow style=filled]
@@ -105,7 +107,7 @@ digraph hierarchy {
     zabbix_web [fillcolor=orange style=filled]
     zabbix_proxy [fillcolor=orange style=filled]
   }
-  {alternatives ansible apt_autostart at atom auditd backup bios_update buildtools common cron dhcpd "digitalocean_agent" dns dovecot environment epel firewall git glusterfs go gotop investigate java logrotate logwatch locale memcached mysql mssql natrouter ntp openssh packer postfix reboot redis release restore rsyslog ruby scl service sosreport squid storage stratis subversion sysstat terraform update update_package_cache users xinetd zabbix_repository} -> bootstrap
+  {alternatives ansible apt_autostart at atom auditd backup bios_update buildtools common cron dhcpd "digitalocean_agent" dns dovecot environment epel firewall git glusterfs go gotop haproxy investigate java logrotate logwatch locale memcached mysql mssql natrouter ntp openssh packer postfix postgres reboot redis release restore rsyslog ruby scl service sosreport squid storage stratis subversion sysstat terraform update update_package_cache users xinetd zabbix_repository} -> bootstrap
   {ansible clamav fail2ban haveged nginx npm phpmyadmin "python_pip" remi snort "sudo_pair" zabbix} -> epel
   {common release selinux update} -> reboot
   {zabbix_agent zabbix_server zabbix_web zabbix_proxy} -> zabbix_repository

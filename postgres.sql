@@ -3,7 +3,7 @@ digraph PhiloDilemma {
   overlap=false
   {
     bootstrap [fillcolor=green style=filled]
-    haproxy [fillcolor=yellow style=filled penwidth=3]
+    postgres [fillcolor=yellow style=filled penwidth=3]
   }
-  haproxy -> bootstrap
+  postgres -> bootstrap
 }
