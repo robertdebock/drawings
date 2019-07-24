@@ -96,6 +96,7 @@ digraph hierarchy {
     travis [fillcolor=orange style=filled]
     update [fillcolor=yellow style=filled]
     update_package_cache [fillcolor=yellow style=filled]
+    ulimit [fillcolor=yellow style=filled]
     users [fillcolor=yellow style=filled]
     vuls [fillcolor=orange style=filled]
     vagrant [fillcolor=red style=filled]
@@ -107,7 +108,7 @@ digraph hierarchy {
     zabbix_web [fillcolor=orange style=filled]
     zabbix_proxy [fillcolor=orange style=filled]
   }
-  {alternatives ansible apt_autostart at atom auditd backup bios_update buildtools common cron dhcpd "digitalocean_agent" dns dovecot environment epel firewall git glusterfs go gotop haproxy investigate java logrotate logwatch locale memcached mysql mssql natrouter ntp openssh packer postfix postgres reboot redis release restore rsyslog ruby scl service sosreport squid storage stratis subversion sysstat terraform update update_package_cache users xinetd zabbix_repository} -> bootstrap
+  {alternatives ansible apt_autostart at atom auditd backup bios_update buildtools common cron dhcpd "digitalocean_agent" dns dovecot environment epel firewall git glusterfs go gotop haproxy investigate java logrotate logwatch locale memcached mysql mssql natrouter ntp openssh packer postfix postgres reboot redis release restore rsyslog ruby scl service sosreport squid storage stratis subversion sysstat terraform update update_package_cache ulimit users xinetd zabbix_repository} -> bootstrap
   {ansible clamav fail2ban haveged nginx npm phpmyadmin "python_pip" remi snort "sudo_pair" zabbix} -> epel
   {common release selinux update} -> reboot
   {zabbix_agent zabbix_server zabbix_web zabbix_proxy} -> zabbix_repository
