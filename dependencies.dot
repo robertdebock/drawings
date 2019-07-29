@@ -20,6 +20,7 @@ digraph hierarchy {
     cloud9 [fillcolor=red style=filled]
     cntlm [fillcolor=yellow style=filled]
     common [fillcolor=orange style=filled]
+    cron [fillcolor=yellow style=filled]
     dhcpd [fillcolor=yellow style=filled]
     "digitalocean_agent" [fillcolor=yellow style=filled]
     dns [fillcolor=yellow style=filled]
