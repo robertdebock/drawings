@@ -27,6 +27,7 @@ digraph hierarchy {
     docker [fillcolor=red style=filled]
     docker_ce [fillcolor=red style=filled]
     dovecot [fillcolor=yellow style=filled]
+    dsvpn [fillcolor=orange style=filled]
     earlyoom [fillcolor=orange style=filled]
     environment [fillcolor=yellow style=filled]
     epel [fillcolor=yellow style=filled]
@@ -125,7 +126,7 @@ digraph hierarchy {
   {php phpmyadmin roundcubemail zabbix} -> httpd [style=dashed penwidth=3]
   php -> remi
   mediawiki -> httpd
-  {awx cntlm cloud9 earlyoom httpd kernel phpmyadmin "python_pip" vuls} -> buildtools
+  {awx cntlm cloud9 dsvpn earlyoom httpd kernel phpmyadmin "python_pip" vuls} -> buildtools
   roundcubemail -> php
   {cloud9 irslackd lynis revealmd sudo_pair vuls} -> git
   {"sudo_pair"} -> {buildtools}
