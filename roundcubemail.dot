@@ -9,10 +9,14 @@ digraph PhiloDilemma {
     "python_pip" [fillcolor=orange style=filled]
     httpd [fillcolor=red style=filled]
     roundcubemail [fillcolor=purple style=filled penwidth=3]
+    selinux [fillcolor=orange style=filled]
+    reboot [fillcolor=yellow style=filled]
   }
   {buildtools epel} -> bootstrap
   "python_pip" -> {buildtools epel}
   httpd -> "python_pip"
   roundcubemail -> {epel php}
   roundcubemail -> httpd [penwidth=3]
+  roundcubemail -> selinux
+  selinux -> reboot
 }

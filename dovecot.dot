@@ -4,10 +4,7 @@ digraph PhiloDilemma {
   overlap=false
   {
     bootstrap [fillcolor=green style=filled]
-    selinux [fillcolor=yellow style=filled]
     dovecot [fillcolor=yellow style=filled penwidth=3]
   }
   dovecot -> bootstrap
-  dovecot -> selinux
-  selinux -> reboot
 }
