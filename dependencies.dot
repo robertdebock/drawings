@@ -136,4 +136,5 @@ digraph hierarchy {
   tomcat -> haveged
   spamassassin -> rsyslog [penwidth=3]
   gitlab_runner -> update
+  roundcubemail -> selinux
 }
