@@ -63,6 +63,7 @@ digraph hierarchy {
     nginx [fillcolor=orange style=filled]
     npm [fillcolor=orange style=filled]
     ntp [fillcolor=yellow style=filled]
+    obsproject [fillcolor=red style=filled]
     openvas [fillcolor=red style=filled]
     openssh [fillcolor=yellow style=filled]
     owncloud [fillcolor=blue style=filled]
@@ -79,6 +80,7 @@ digraph hierarchy {
     revealmd [fillcolor=red style=filled]
     restore [fillcolor=yellow style=filled]
     roundcubemail [fillcolor=blue style=filled]
+    rpmfusion [fillcolor=orange style=filled]
     rsyslog [fillcolor=yellow style=filled]
     ruby [fillcolor=yellow style=filled]
     rundeck [fillcolor=orange style=filled]
@@ -114,7 +116,7 @@ digraph hierarchy {
     zabbix_proxy [fillcolor=orange style=filled]
   }
   {alternatives ansible apt_autostart at atom auditd backup bios_update buildtools common container_docs cron dhcpd "digitalocean_agent" dns dovecot environment epel firewall git glusterfs go gotop haproxy hostname investigate java logrotate logwatch locale memcached mysql mssql natrouter ntp openssh packer postfix postgres reboot redis release restore rsyslog ruby scl service sosreport squid storage stratis subversion sysctl sysstat terraform update update_package_cache ulimit users xinetd zabbix_repository} -> bootstrap
-  {ansible clamav fail2ban haveged nginx npm phpmyadmin "python_pip" remi snort "sudo_pair" zabbix} -> epel
+  {ansible clamav fail2ban haveged nginx npm phpmyadmin "python_pip" remi rpmfusion snort "sudo_pair" zabbix} -> epel
   {common release selinux update} -> reboot
   {zabbix_agent zabbix_server zabbix_web zabbix_proxy} -> zabbix_repository
   postfix -> {spamassassin clamav} [style=dashed]
@@ -139,4 +141,5 @@ digraph hierarchy {
   gitlab_runner -> update
   roundcubemail -> selinux
   logrotate -> cron
+  obsproject -> rpmfusion
 }

@@ -1,0 +1,13 @@
+digraph PhiloDilemma {
+  label = "Robert de Bock" ;
+  overlap=false
+  {
+    bootstrap [fillcolor=green style=filled]
+    epel [fillcolor=yellow style=filled]
+    rpmfusion [fillcolor=orange style=filled]
+    obsproject [fillcolor=orange style=filled penwidth=3]
+  }
+  epel -> bootstrap
+  rpmfusion -> epel
+  obsproject -> rpmfusion
+}
