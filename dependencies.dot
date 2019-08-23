@@ -55,6 +55,7 @@ digraph hierarchy {
     lynis [fillcolor=orange style=filled]
     mediawiki [fillcolor=purple style=filled]
     memcached [fillcolor=yellow style=filled]
+    minikube [fillcolor=orange style=filled]
     mitogen [fillcolor=red style=filled]
     molecule [fillcolor=red style=filled]
     mssql [fillcolor=yellow style=filled]
@@ -135,7 +136,7 @@ digraph hierarchy {
   {cloud9 irslackd lynis revealmd sudo_pair vuls} -> git
   {"sudo_pair"} -> {buildtools}
   {artifactory jenkins rundeck tomcat} -> java
-  {ara anaconda artifactory cloud9 cntlm irslackd rundeck tomcat} -> service
+  {ara anaconda artifactory cloud9 cntlm irslackd minikube rundeck tomcat} -> service
   tomcat -> haveged
   spamassassin -> rsyslog [penwidth=3]
   gitlab_runner -> update
