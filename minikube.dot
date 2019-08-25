@@ -4,8 +4,8 @@ digraph PhiloDilemma {
   {
     bootstrap [fillcolor=green style=filled]
     service [fillcolor=yellow style=filled]
-    minikube [fillcolor=orange style=filled]
+    minikube [fillcolor=red style=filled penwidth=3]
   }
-  service -> bootstrap
   minikube -> service
+  service -> bootstrap
 }
