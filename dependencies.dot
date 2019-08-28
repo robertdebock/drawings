@@ -56,7 +56,7 @@ digraph hierarchy {
     lynis [fillcolor=orange style=filled]
     mediawiki [fillcolor=purple style=filled]
     memcached [fillcolor=yellow style=filled]
-    minikube [fillcolor=orange style=filled]
+    minikube [fillcolor=purple style=filled]
     mitogen [fillcolor=red style=filled]
     molecule [fillcolor=red style=filled]
     mssql [fillcolor=yellow style=filled]
@@ -145,4 +145,5 @@ digraph hierarchy {
   roundcubemail -> selinux
   logrotate -> cron
   obsproject -> rpmfusion
+  minikube -> {kubectl docker}
 }
