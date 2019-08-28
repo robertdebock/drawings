@@ -5,12 +5,13 @@ digraph PhiloDilemma {
     bootstrap [fillcolor=green style=filled]
     service [fillcolor=yellow style=filled]
     epel [fillcolor=yellow style=filled]
-    python_pip [fillcolor=yellow style=filled]
+    docker [fillcolor=red style=filled]
+    python_pip [fillcolor=orange style=filled]
     kubectl [fillcolor=yellow style=filled]
-    minikube [fillcolor=red style=filled penwidth=3]
+    minikube [fillcolor=purple style=filled penwidth=3]
   }
-  minikube -> {service minikube docker}
+  minikube -> {service kubectl docker}
   docker -> python_pip
   python_pip -> epel
-  {minikube service} -> bootstrap
+  {epel minikube service} -> bootstrap
 }
