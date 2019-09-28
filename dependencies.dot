@@ -148,5 +148,5 @@ digraph hierarchy {
   logrotate -> cron
   obsproject -> rpmfusion
   minikube -> {kubectl docker}
-  omsagent -> users
+  omsagent -> {auditd cron users}
 }

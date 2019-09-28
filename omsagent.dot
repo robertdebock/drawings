@@ -3,9 +3,11 @@ digraph PhiloDilemma {
   overlap=false
   {
     bootstrap [fillcolor=green style=filled]
+    auditd [fillcolor=yellow style=filled]
+    cron [fillcolor=yellow style=filled]
     users [fillcolor=yellow style=filled]
     omsagent [fillcolor=orange style=filled penwidth=3]
   }
-  omsagent -> users
-  users -> bootstrap
+  omsagent -> {auditd cron users}
+  {auditd cron users} -> bootstrap
 }
