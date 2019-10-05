@@ -3,10 +3,11 @@ digraph PhiloDilemma {
   overlap=false
   {
     bootstrap [fillcolor=green style=filled]
+    code_dependencies [fillcolor=yellow style=filled]
     epel [fillcolor=yellow style=filled]
     buildtools [fillcolor=yellow style=filled]
     "sudo_pair" [fillcolor=orange style=filled penwidth=3]
   }
   {buildtools epel} -> bootstrap
-  "sudo_pair" -> {buildtools epel}
+  "sudo_pair" -> {buildtools epel core_dependencies}
 }

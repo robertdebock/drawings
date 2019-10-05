@@ -129,7 +129,7 @@ digraph hierarchy {
   travis -> ruby
   {anaconda ansible_lint ara awx docker docker_ce httpd mitogen molecule openvas vagrant} -> "python_pip"
   openvas -> redis
-  {artifactory dns dsvpn docker} -> "core_dependencies"
+  {artifactory dns dsvpn docker sudo_pair squid} -> "core_dependencies"
   {cloud9 etherpad irslackd revealmd} -> npm
   vuls -> go
   tftpd -> xinetd  [penwidth=3]
