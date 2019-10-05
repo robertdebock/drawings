@@ -3,10 +3,11 @@ digraph PhiloDilemma {
   overlap=false
   {
     bootstrap [fillcolor=green style=filled]
+    core_dependencies [fillcolor=yellow style=filled]
     java [fillcolor=yellow style=filled]
     service [fillcolor=yellow style=filled]
     artifactory [fillcolor=orange style=filled penwidth=3]
   }
   {java service} -> bootstrap
-  artifactory -> {java service}
+  artifactory -> {java service core_dependencies}
 }
