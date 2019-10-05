@@ -21,6 +21,7 @@ digraph hierarchy {
     cntlm [fillcolor=yellow style=filled]
     container_docs [fillcolor=yellow style=filled]
     common [fillcolor=orange style=filled]
+    core_dependencies [fillcolor=yellow style=filled]
     cron [fillcolor=yellow style=filled]
     dhcpd [fillcolor=yellow style=filled]
     debug [fillcolor=yellow styly=filled]
@@ -128,6 +129,7 @@ digraph hierarchy {
   travis -> ruby
   {anaconda ansible_lint ara awx docker docker_ce httpd mitogen molecule openvas vagrant} -> "python_pip"
   openvas -> redis
+  docker -> "core_dependencies"
   {cloud9 etherpad irslackd revealmd} -> npm
   vuls -> go
   tftpd -> xinetd  [penwidth=3]
