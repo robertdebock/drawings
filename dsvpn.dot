@@ -3,9 +3,10 @@ digraph PhiloDilemma {
   overlap=false
   {
     bootstrap [fillcolor=green style=filled]
+    core_dependencies [fillcolor=yellow style=filled]
     buildtools [fillcolor=yellow style=filled]
     dsvpn [fillcolor=orange style=filled penwidth=3]
   }
-  dsvpn -> buildtools
+  dsvpn -> {buildtools core_dependencies}
   buildtools -> bootstrap
 }
