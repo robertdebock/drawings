@@ -3,9 +3,10 @@ digraph PhiloDilemma {
   overlap=false
   {
     bootstrap [fillcolor=green style=filled]
+    cron [fillcolor=yellow style=filled]
     git [fillcolor=yellow style=filled]
     lynis [fillcolor=orange style=filled penwidth=3]
   }
   git -> bootstrap
-  lynis -> git
+  lynis -> {cron git}
 }
