@@ -12,6 +12,7 @@ digraph hierarchy {
     atom [fillcolor=yellow style=filled]
     auditd [fillcolor=yellow style=filled]
     awx [fillcolor=red style=filled]
+    azure_cli [fillcolor=red style=filled]
     backup [fillcolor=yellow style=filled]
     bios_update [fillcolor=yellow style=filled]
     bootstrap [fillcolor=green style=filled]
@@ -60,6 +61,7 @@ digraph hierarchy {
     lynis [fillcolor=orange style=filled]
     mediawiki [fillcolor=purple style=filled]
     memcached [fillcolor=yellow style=filled]
+    microsoft_repository_keys [fillcolor=orange style=filled]
     minikube [fillcolor=purple style=filled]
     mitogen [fillcolor=red style=filled]
     molecule [fillcolor=red style=filled]
@@ -153,4 +155,6 @@ digraph hierarchy {
   obsproject -> rpmfusion
   minikube -> {kubectl docker}
   omsagent -> {auditd cron users}
+  "microsoft_repository_keys" -> "ca_certificates"
+  azure_cli -> {"microsoft_repository_keys" "python_pip"}
 }

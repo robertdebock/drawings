@@ -1,0 +1,16 @@
+digraph PhiloDilemma {
+  label = "Robert de Bock" ;
+  overlap=false
+  {
+    bootstrap [fillcolor=green style=filled]
+    buildtools [fillcolor=yellow style=filled]
+    "ca_certificates" [fillcolor=yellow style=filled]
+    epel [fillcolor=yellow style=filled]
+    "python_pip" [fillcolor=orange style=filled]
+    "microsoft_repository_keys" [fillcolor=yellow style=filled]
+    azure_cli [fillcolor=red style=filled penwidth=3]
+  }
+  azure_cli -> {"microsoft_repository_keys" "python_pip"}
+  "python_pip" -> {buildtools epel}
+  {buildtools "ca_certificates" epel} -> bootstrap
+}
