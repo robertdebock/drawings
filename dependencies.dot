@@ -1,6 +1,7 @@
 digraph hierarchy {
   label = "Robert de Bock" ;
   {
+    aide [fillcolor=orange style=filled]
     alternatives [fillcolor=orange style=filled]
     anaconda [fillcolor=red style=filled]
     ansible [fillcolor=orange style=filled]
@@ -152,7 +153,7 @@ digraph hierarchy {
   spamassassin -> rsyslog [penwidth=3]
   gitlab_runner -> update
   roundcubemail -> selinux
-  {logrotate lynis" -> cron
+  {aide logrotate lynis} -> cron
   obsproject -> rpmfusion
   minikube -> {kubectl docker}
   omsagent -> {auditd cron users}
