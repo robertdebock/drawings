@@ -115,6 +115,7 @@ digraph hierarchy {
     travis [fillcolor=orange style=filled]
     update [fillcolor=yellow style=filled]
     update_package_cache [fillcolor=yellow style=filled]
+    unbound [fillcolor=orange style=filled]
     ulimit [fillcolor=yellow style=filled]
     users [fillcolor=yellow style=filled]
     vuls [fillcolor=orange style=filled]
@@ -143,12 +144,12 @@ digraph hierarchy {
   {php phpmyadmin roundcubemail zabbix} -> httpd [style=dashed penwidth=3]
   php -> remi
   mediawiki -> httpd
-  {awx cntlm cloud9 dsvpn earlyoom httpd kernel phpmyadmin "python_pip" vuls} -> buildtools
+  {awx cntlm cloud9 dsvpn earlyoom httpd kernel phpmyadmin "python_pip" unbound vuls} -> buildtools
   roundcubemail -> php
   {cloud9 irslackd lynis revealmd sudo_pair vuls} -> git
   {"sudo_pair"} -> {buildtools}
   {artifactory jenkins rundeck tomcat} -> java
-  {ara anaconda artifactory cloud9 cntlm irslackd minikube powetop rundeck tomcat} -> service
+  {ara anaconda artifactory cloud9 cntlm irslackd minikube powetop rundeck tomcat unbound} -> service
   tomcat -> haveged
   spamassassin -> rsyslog [penwidth=3]
   gitlab_runner -> update
