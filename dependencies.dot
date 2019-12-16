@@ -75,7 +75,6 @@ digraph hierarchy {
     ntp [fillcolor=yellow style=filled]
     obsproject [fillcolor=red style=filled]
     omsagent [fillcolor=orange style=filled]
-    openvas [fillcolor=red style=filled]
     openssh [fillcolor=yellow style=filled]
     owncloud [fillcolor=blue style=filled]
     packer [fillcolor=yellow style=filled]
@@ -121,7 +120,6 @@ digraph hierarchy {
     vuls [fillcolor=orange style=filled]
     vagrant [fillcolor=red style=filled]
     xinetd [fillcolor=yellow style=filled]
-    zabbix [fillcolor=purple style=filled]
     zabbix_repository [fillcolor=yellow style=filled]
     zabbix_agent [fillcolor=orange style=filled]
     zabbix_server [fillcolor=orange style=filled]
@@ -129,19 +127,18 @@ digraph hierarchy {
     zabbix_proxy [fillcolor=orange style=filled]
   }
   {alternatives ansible apt_autostart at atom auditd backup bios_update buildtools ca ca_certificates common container_docs core_dependencies cron debug dhcpd "digitalocean_agent" dovecot environment epel firewall forensics git glusterfs go gotop haproxy hostname investigate java kubectl logrotate logwatch locale memcached mysql mssql natrouter ntp openssh packer postfix postgres reboot redis release restore rsyslog ruby scl service sosreport squid storage stratis subversion sysctl sysstat terraform update update_package_cache ulimit unowned_files users xinetd zabbix_repository} -> bootstrap
-  {ansible clamav fail2ban haveged nginx npm phpmyadmin "python_pip" remi rpmfusion snort "sudo_pair" zabbix} -> epel
+  {ansible clamav fail2ban haveged nginx npm phpmyadmin "python_pip" remi rpmfusion snort "sudo_pair"} -> epel
   {common release selinux update} -> reboot
   {zabbix_agent zabbix_server zabbix_web zabbix_proxy} -> zabbix_repository
   postfix -> {spamassassin clamav} [style=dashed]
   travis -> ruby
-  {anaconda ansible_lint ara awx docker docker_ce httpd mitogen molecule openvas vagrant} -> "python_pip"
-  openvas -> redis
+  {anaconda ansible_lint ara awx docker docker_ce httpd mitogen molecule vagrant} -> "python_pip"
   {artifactory dns dsvpn docker sudo_pair squid spamassassin} -> "core_dependencies"
   {cloud9 etherpad irslackd revealmd} -> npm
   vuls -> go
   tftpd -> xinetd  [penwidth=3]
   {ara owncloud phpmyadmin} -> {buildtools php mysql}
-  {php phpmyadmin roundcubemail zabbix} -> httpd [style=dashed penwidth=3]
+  {php phpmyadmin roundcubemail} -> httpd [style=dashed penwidth=3]
   php -> remi
   mediawiki -> httpd
   {awx cntlm cloud9 dsvpn earlyoom httpd kernel phpmyadmin "python_pip" unbound vuls} -> buildtools
