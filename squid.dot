@@ -4,7 +4,8 @@ digraph PhiloDilemma {
   {
     bootstrap [fillcolor=green style=filled]
     core_dependencies [fillcolor=yellow style=filled]
-    squid [fillcolor=yellow style=filled penwidth=3]
+    squid [fillcolor=orange style=filled penwidth=3]
   }
-  squid -> {bootstrap core_dependencies}
+  squid -> core_dependencies
+  core_dependencies -> bootstrap
 }
