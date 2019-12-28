@@ -12,6 +12,7 @@ digraph hierarchy {
     at [fillcolor=yellow style=filled]
     atom [fillcolor=yellow style=filled]
     auditd [fillcolor=yellow style=filled]
+    auto_update [fillcolor=orange style=filled]
     awx [fillcolor=red style=filled]
     azure_cli [fillcolor=red style=filled]
     backup [fillcolor=yellow style=filled]
@@ -151,7 +152,7 @@ digraph hierarchy {
   spamassassin -> rsyslog [penwidth=3]
   gitlab_runner -> update
   roundcubemail -> selinux
-  {aide logrotate lynis} -> cron
+  {aide auto_update logrotate lynis} -> cron
   obsproject -> rpmfusion
   minikube -> {kubectl docker}
   omsagent -> {auditd cron users}
