@@ -3,7 +3,9 @@ digraph PhiloDilemma {
   overlap=false
   {
     bootstrap [fillcolor=green style=filled]
-    haproxy [fillcolor=yellow style=filled penwidth=3]
+    core_dependencies [fillcolor=yellow style=filled]
+    haproxy [fillcolor=orange style=filled penwidth=3]
   }
-  haproxy -> bootstrap
+  haproxy -> core_dependencies
+  core_dependencies -> bootstrap
 }
