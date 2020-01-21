@@ -37,6 +37,7 @@ digraph hierarchy {
     dovecot [fillcolor=yellow style=filled]
     dsvpn [fillcolor=orange style=filled]
     earlyoom [fillcolor=orange style=filled]
+    eclipse [fillcolor=orange style=filled]
     environment [fillcolor=yellow style=filled]
     epel [fillcolor=yellow style=filled]
     etherpad [fillcolor=red style=filled]
@@ -137,7 +138,7 @@ digraph hierarchy {
   postfix -> {spamassassin clamav} [style=dashed]
   travis -> ruby
   {anaconda ansible_lint ara awx docker docker_ce httpd mitogen molecule vagrant} -> "python_pip"
-  {artifactory dns dsvpn docker haproxy sudo_pair squid spamassassin} -> "core_dependencies"
+  {artifactory dns dsvpn docker eclipse haproxy sudo_pair squid spamassassin} -> "core_dependencies"
   {cloud9 etherpad irslackd revealmd} -> npm
   vuls -> go
   tftpd -> xinetd  [penwidth=3]
@@ -149,7 +150,7 @@ digraph hierarchy {
   roundcubemail -> php
   {cloud9 irslackd lynis revealmd sudo_pair vuls} -> git
   {"sudo_pair"} -> {buildtools}
-  {artifactory jenkins rundeck tomcat} -> java
+  {artifactory eclipse jenkins rundeck tomcat} -> java
   {ara anaconda artifactory cloud9 cntlm irslackd minikube powertop rundeck tomcat unbound} -> service
   tomcat -> haveged
   spamassassin -> rsyslog [penwidth=3]

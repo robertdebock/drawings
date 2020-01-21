@@ -1,0 +1,12 @@
+digraph PhiloDilemma {
+  label = "Robert de Bock" ;
+  overlap=false
+  {
+    bootstrap [fillcolor=green style=filled]
+    java [fillcolor=yellow style=filled]
+    core_dependencies [fillcolor=yellow style=filled]
+    eclipse [fillcolor=orange style=filled penwidth=3]
+  }
+  {java core_dependencies} -> bootstrap
+  eclipse -> {java core_dependencies}
+}
