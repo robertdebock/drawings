@@ -3,9 +3,12 @@ digraph PhiloDilemma {
   overlap=false
   {
     bootstrap [fillcolor=green style=filled]
+    buildtools [fillcolor=yellow style=filled]
+    core_dependencies [fillcolor=yellow style=filled]
     epel [fillcolor=yellow style=filled]
+    service [fillcolor=yellow style=filled]
     snort [fillcolor=orange style=filled penwidth=3]
   }
-  snort -> epel
-  epel -> bootstrap
+  snort -> {buildtools core_dependencies epel service}
+  {buildtools core_dependencies epel service} -> bootstrap
 }
