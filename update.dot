@@ -3,7 +3,9 @@ digraph PhiloDilemma {
   overlap=false
   {
     bootstrap [fillcolor=green style=filled]
-    update [fillcolor=yellow style=filled]
+    reboot [fillcolor=yellow style=filled]
+    update [fillcolor=orange style=filled]
   }
-  update -> bootstrap
+  update -> reboot
+  reboot -> bootstrap
 }
