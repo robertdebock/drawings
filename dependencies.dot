@@ -122,6 +122,7 @@ digraph hierarchy {
     update_package_cache [fillcolor=yellow style=filled]
     unbound [fillcolor=orange style=filled]
     ulimit [fillcolor=yellow style=filled]
+    unowned_files [fillcolor=yellow style=filled]
     users [fillcolor=yellow style=filled]
     vuls [fillcolor=orange style=filled]
     vagrant [fillcolor=red style=filled]
