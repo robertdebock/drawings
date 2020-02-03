@@ -3,7 +3,11 @@ digraph PhiloDilemma {
   overlap=false
   {
     bootstrap [fillcolor=green style=filled]
-    postfix [fillcolor=yellow style=filled penwidth=3]
+    rsyslog [fillcolor=yellow style=filled]
+    spamassassin [fillcolor=orange style=filled]
+    postfix [fillcolor=red style=filled penwidth=3]
   }
-  postfix -> bootstrap
+  postfix -> spamassassin
+  spamassassin -> rsyslog
+  rsyslog -> bootstrap
 }
