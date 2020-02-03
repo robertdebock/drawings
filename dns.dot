@@ -3,7 +3,8 @@ digraph PhiloDilemma {
   overlap=false
   {
     bootstrap [fillcolor=green style=filled]
-    dns [fillcolor=yellow style=filled penwidth=3]
+    "core_dependencies" [fillcolor=yellow style=filled]
+    dns [fillcolor=orange style=filled penwidth=3]
   }
   dns -> "core_dependencies"
   "core_dependencies" -> bootstrap

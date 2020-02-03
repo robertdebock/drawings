@@ -32,7 +32,7 @@ digraph hierarchy {
     dhcpd [fillcolor=yellow style=filled]
     debug [fillcolor=yellow style=filled]
     "digitalocean_agent" [fillcolor=yellow style=filled]
-    dns [fillcolor=yellow style=filled]
+    dns [fillcolor=orange style=filled]
     docker [fillcolor=red style=filled]
     docker_ce [fillcolor=red style=filled]
     dovecot [fillcolor=yellow style=filled]
