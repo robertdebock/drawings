@@ -23,7 +23,7 @@ digraph hierarchy {
     ca_certificates [fillcolor=yellow style=filled]
     clamav [fillcolor=orange style=filled]
     cloud9 [fillcolor=red style=filled]
-    cntlm [fillcolor=yellow style=filled]
+    cntlm [fillcolor=orange style=filled]
     collectd [fillcolor=orange style=filled]
     container_docs [fillcolor=yellow style=filled]
     common [fillcolor=orange style=filled]
