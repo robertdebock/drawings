@@ -30,7 +30,7 @@ digraph hierarchy {
     core_dependencies [fillcolor=yellow style=filled]
     cron [fillcolor=yellow style=filled]
     dhcpd [fillcolor=yellow style=filled]
-    debug [fillcolor=yellow styly=filled]
+    debug [fillcolor=yellow style=filled]
     "digitalocean_agent" [fillcolor=yellow style=filled]
     dns [fillcolor=yellow style=filled]
     docker [fillcolor=red style=filled]
