@@ -2,7 +2,7 @@ digraph hierarchy {
   label = "Robert de Bock" ;
   {
     aide [fillcolor=orange style=filled]
-    alternatives [fillcolor=orange style=filled]
+    alternatives [fillcolor=yellow style=filled]
     anaconda [fillcolor=red style=filled]
     ansible [fillcolor=orange style=filled]
     ansible_lint [fillcolor=red style=filled]
