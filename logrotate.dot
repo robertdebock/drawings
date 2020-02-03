@@ -3,9 +3,9 @@ digraph PhiloDilemma {
   overlap=false
   {
     bootstrap [fillcolor=green style=filled]
-    logrotate [fillcolor=yellow style=filled]
     cron [fillcolor=yellow style=filled]
+    logrotate [fillcolor=yellow style=filled]
   }
-  logrotate -> bootstrap
+  cron -> bootstrap
   logrotate -> cron
 }
