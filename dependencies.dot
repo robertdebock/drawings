@@ -65,6 +65,7 @@ digraph hierarchy {
     logwatch [fillcolor=yellow style=filled]
     locale [fillcolor=yellow style=filled]
     lynis [fillcolor=orange style=filled]
+    maintenance [fillcolor=yellow style=filled]
     mediawiki [fillcolor=purple style=filled]
     memcached [fillcolor=yellow style=filled]
     microsoft_repository_keys [fillcolor=orange style=filled]
@@ -133,7 +134,7 @@ digraph hierarchy {
     zabbix_web [fillcolor=orange style=filled]
     zabbix_proxy [fillcolor=orange style=filled]
   }
-  {alternatives ansible apt_autostart at atom auditd backup bios_update buildtools ca ca_certificates common container_docs core_dependencies cron debug dhcpd "digitalocean_agent" dovecot environment epel facts firewall forensics git glusterfs go gotop hostname investigate java kubectl logwatch locale memcached mysql mssql natrouter ntp openssh packer postgres powertools reboot redis release restore rsyslog ruby scl service sosreport storage stratis subversion sysctl sysstat terraform test_connection update_package_cache ulimit unowned_files users xinetd zabbix_repository} -> bootstrap
+  {alternatives ansible apt_autostart at atom auditd backup bios_update buildtools ca ca_certificates common container_docs core_dependencies cron debug dhcpd "digitalocean_agent" dovecot environment epel facts firewall forensics git glusterfs go gotop hostname investigate java kubectl logwatch locale maintenance memcached mysql mssql natrouter ntp openssh packer postgres powertools reboot redis release restore rsyslog ruby scl service sosreport storage stratis subversion sysctl sysstat terraform test_connection update_package_cache ulimit unowned_files users xinetd zabbix_repository} -> bootstrap
   {ansible clamav collectd fail2ban haveged nginx npm phpmyadmin "python_pip" remi rpmfusion snort "sudo_pair"} -> epel
   {common release selinux update} -> reboot
   {zabbix_agent zabbix_server zabbix_web zabbix_proxy} -> zabbix_repository
