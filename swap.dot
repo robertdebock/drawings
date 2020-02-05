@@ -4,8 +4,8 @@ digraph PhiloDilemma {
   {
     bootstrap [fillcolor=green style=filled]
     sysclt [fillcolor=yellow style=filled]
-    natrouter [fillcolor=orange style=filled penwidth=3]
+    swap [fillcolor=orange style=filled penwidth=3]
   }
-  natrouter -> sysctl
+  swap -> sysctl
   sysclt -> bootstrap
 }
