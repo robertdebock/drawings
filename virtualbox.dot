@@ -3,7 +3,9 @@ digraph PhiloDilemma {
   overlap=false
   {
     bootstrap [fillcolor=green style=filled]
-    virtualbox [fillcolor=yellow style=filled penwidth=3]
+    ca_certificates [fillcolor=yellow style=filled]
+    virtualbox [fillcolor=orange style=filled penwidth=3]
   }
-  virtualbox -> bootstrap
+  virtualbox -> ca_certificates
+  ca_certificates -> bootstrap
 }
