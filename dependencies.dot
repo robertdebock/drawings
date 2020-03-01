@@ -129,6 +129,7 @@ digraph hierarchy {
     users [fillcolor=yellow style=filled]
     vuls [fillcolor=orange style=filled]
     vagrant [fillcolor=red style=filled]
+    virtualbox [fillcolor=orange style=filled]
     xinetd [fillcolor=yellow style=filled]
     zabbix_repository [fillcolor=yellow style=filled]
     zabbix_agent [fillcolor=orange style=filled]
@@ -165,7 +166,7 @@ digraph hierarchy {
   obsproject -> rpmfusion
   minikube -> {kubectl docker}
   omsagent -> {auditd cron users}
-  "microsoft_repository_keys" -> "ca_certificates"
+  {"microsoft_repository_keys" virtualbox} -> "ca_certificates"
   azure_cli -> {"microsoft_repository_keys" "python_pip"}
   {swap natrouter} -> sysctl
 }
