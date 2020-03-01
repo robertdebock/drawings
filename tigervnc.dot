@@ -1,0 +1,13 @@
+digraph PhiloDilemma {
+  label = "Robert de Bock" ;
+  overlap=false
+  {
+    bootstrap [fillcolor=green style=filled]
+    core_dependencies [fillcolor=yellow style=filled]
+    desktop [fillcolor=yellow style=filled]
+    users [fillcolor=yellow style=filled]
+    tigervnc [fillcolor=orange style=filled penwidth=3]
+  }
+  tigervnc -> {core_dependencies desktop users}
+  {core_dependencies desktop users} -> bootstrap
+}

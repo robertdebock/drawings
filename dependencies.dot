@@ -119,6 +119,7 @@ digraph hierarchy {
     terraform [fillcolor=yellow style=filled]
     test_connection [fillcolor=yellow style=filled]
     tftpd [fillcolor=orange style=filled]
+    tigervnc [fillcolor=orange style=filled]
     tomcat [fillcolor=red style=filled]
     travis [fillcolor=orange style=filled]
     update [fillcolor=orange style=filled]
@@ -144,7 +145,7 @@ digraph hierarchy {
   postfix -> {spamassassin clamav} [style=dashed]
   travis -> ruby
   {anaconda ansible_lint ara awx docker docker_ce httpd mitogen molecule vagrant} -> "python_pip"
-  {artifactory dns dsvpn docker eclipse haproxy snort sudo_pair squid spamassassin} -> "core_dependencies"
+  {artifactory dns dsvpn docker eclipse haproxy snort sudo_pair squid spamassassin tigervnc} -> "core_dependencies"
   {cloud9 etherpad irslackd revealmd} -> npm
   vuls -> go
   tftpd -> xinetd  [penwidth=3]
@@ -166,6 +167,7 @@ digraph hierarchy {
   obsproject -> rpmfusion
   minikube -> {kubectl docker}
   omsagent -> {auditd cron users}
+  tigervnc -> {desktop users}
   {"microsoft_repository_keys" virtualbox} -> "ca_certificates"
   azure_cli -> {"microsoft_repository_keys" "python_pip"}
   {swap natrouter} -> sysctl
