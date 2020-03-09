@@ -132,13 +132,14 @@ digraph hierarchy {
     vagrant [fillcolor=red style=filled]
     virtualbox [fillcolor=orange style=filled]
     xinetd [fillcolor=yellow style=filled]
+    xrdp [fillcolor=yellow style=filled]
     zabbix_repository [fillcolor=yellow style=filled]
     zabbix_agent [fillcolor=orange style=filled]
     zabbix_server [fillcolor=orange style=filled]
     zabbix_web [fillcolor=orange style=filled]
     zabbix_proxy [fillcolor=orange style=filled]
   }
-  {alternatives ansible apt_autostart at atom auditd backup bios_update buildtools ca ca_certificates common container_docs core_dependencies cron debug desktop dhcpd "digitalocean_agent" dovecot environment epel facts firewall forensics git glusterfs go gotop hostname investigate java kubectl logwatch locale maintenance memcached mysql mssql ntp openssh packer postgres powertools reboot redis release restore rsyslog ruby scl service sosreport storage stratis subversion sysctl sysstat terraform test_connection update_package_cache ulimit unowned_files users xinetd zabbix_repository} -> bootstrap
+  {alternatives ansible apt_autostart at atom auditd backup bios_update buildtools ca ca_certificates common container_docs core_dependencies cron debug desktop dhcpd "digitalocean_agent" dovecot environment epel facts firewall forensics git glusterfs go gotop hostname investigate java kubectl logwatch locale maintenance memcached mysql mssql ntp openssh packer postgres powertools reboot redis release restore rsyslog ruby scl service sosreport storage stratis subversion sysctl sysstat terraform test_connection update_package_cache ulimit unowned_files users xinetd xrdp zabbix_repository} -> bootstrap
   {ansible clamav collectd fail2ban haveged nginx npm phpmyadmin "python_pip" remi rpmfusion snort "sudo_pair"} -> epel
   {common release selinux update} -> reboot
   {zabbix_agent zabbix_server zabbix_web zabbix_proxy} -> zabbix_repository
