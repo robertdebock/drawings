@@ -6,7 +6,6 @@ digraph hierarchy {
     httpd [fillcolor=green style=filled]
     mediawiki [fillcolor=yellow style=filled]
     mysql [fillcolor=green style=filled]
-    openvas [fillcolor=orange style=filled]
     openvpn [fillcolor=yellow style=filled]
     owncloud [fillcolor=yellow style=filled]
     php [fillcolor=yellow style=filled]
@@ -24,7 +23,6 @@ digraph hierarchy {
   }
   {openvpn} -> ca
   {common release selinux update} -> reboot
-  openvas -> selinux
   {mediawiki owncloud php phpmyadmin roundcubemail zabbix}-> httpd
   spamassassin -> rsyslog
   tftpd -> xinetd
