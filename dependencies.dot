@@ -60,6 +60,7 @@ digraph hierarchy {
     irslackd [fillcolor=red style=filled]
     java [fillcolor=yellow style=filled]
     jenkins [fillcolor=orange style=filled]
+    jitsi [fillcolor=orange style=filled]
     kernel [fillcolor=orange style=filled]
     kubectl [fillcolor=yellow style=filled]
     logrotate [fillcolor=orange style=filled]
@@ -170,7 +171,8 @@ digraph hierarchy {
   minikube -> {kubectl docker}
   omsagent -> {auditd cron users}
   tigervnc -> {desktop users}
-  {"microsoft_repository_keys" virtualbox} -> "ca_certificates"
+  {jitsi "microsoft_repository_keys" virtualbox} -> "ca_certificates"
   azure_cli -> {"microsoft_repository_keys" "python_pip"}
   {swap natrouter} -> sysctl
+  jitsi -> hostname
 }
