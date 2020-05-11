@@ -58,6 +58,7 @@ digraph hierarchy {
     haproxy [fillcolor=orange style=filled]
     httpd [fillcolor=red style=filled]
     hostname [fillcolor=yellow style=filled]
+    "image_builder" [fillcolor=yellow style=filled]
     investigate [fillcolor=yellow style=filled]
     irslackd [fillcolor=red style=filled]
     java [fillcolor=yellow style=filled]
@@ -143,7 +144,7 @@ digraph hierarchy {
     zabbix_web [fillcolor=orange style=filled]
     zabbix_proxy [fillcolor=orange style=filled]
   }
-  {alternatives ansible apt_autostart at atom auditd backup bios_update buildtools ca ca_certificates common container_docs core_dependencies cron debug desktop dhcpd "digitalocean_agent" dovecot environment epel facts firewall forensics git glusterfs gnome go gotop hostname investigate java kubectl logwatch locale maintenance mate memcached mysql mssql ntp openssh packer postgres powertools reboot redis release restore rsyslog ruby scl service sosreport storage stratis subversion sysctl sysstat terraform test_connection update_package_cache ulimit unowned_files users xinetd zabbix_repository} -> bootstrap
+  {alternatives ansible apt_autostart at atom auditd backup bios_update buildtools ca ca_certificates common container_docs core_dependencies cron debug desktop dhcpd "digitalocean_agent" dovecot environment epel facts firewall forensics git glusterfs gnome go gotop hostname image_builder investigate java kubectl logwatch locale maintenance mate memcached mysql mssql ntp openssh packer postgres powertools reboot redis release restore rsyslog ruby scl service sosreport storage stratis subversion sysctl sysstat terraform test_connection update_package_cache ulimit unowned_files users xinetd zabbix_repository} -> bootstrap
   {ansible clamav collectd fail2ban haveged nginx npm phpmyadmin "python_pip" remi rpmfusion snort "sudo_pair" xrdp} -> epel
   {common release selinux update} -> reboot
   {zabbix_agent zabbix_server zabbix_web zabbix_proxy} -> zabbix_repository
