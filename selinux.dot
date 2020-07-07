@@ -3,9 +3,7 @@ digraph PhiloDilemma {
   overlap=false
   {
     bootstrap [fillcolor=green style=filled]
-    reboot [fillcolor=yellow style=filled]
     selinux [fillcolor=yellow style=filled penwidth=3]
   }
-  reboot -> bootstrap
-  selinux -> reboot
+  selinux -> bootstrap
 }
