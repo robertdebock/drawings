@@ -3,7 +3,14 @@ digraph PhiloDilemma {
   overlap=false
   {
     bootstrap [fillcolor=green style=filled]
-    php_fpm [fillcolor=yellow style=filled penwidth=3]
+    buildtools [fillcolor=yellow style=filled]
+    epel [fillcolor=yellow style=filled]
+    "python_pip" [fillcolor=orange style=filled]
+    httpd [fillcolor=red style=filled]
+    owncloud [fillcolor=purple style=filled penwidth=3]
   }
-  php_fpm -> bootstrap
+  {buildtools epel} -> bootstrap
+  "python_pip" -> {buildtools epel}
+  httpd -> "python_pip"
+  owncloud -> httpd
 }

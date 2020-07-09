@@ -91,7 +91,7 @@ digraph hierarchy {
     omsagent [fillcolor=orange style=filled]
     openssh [fillcolor=yellow style=filled]
     openssl [fillcolor=red style=filled]
-    owncloud [fillcolor=blue style=filled]
+    owncloud [fillcolor=purple style=filled]
     packer [fillcolor=yellow style=filled]
     php [fillcolor=purple style=filled]
     phpmyadmin [fillcolor=blue style=filled]
@@ -160,10 +160,10 @@ digraph hierarchy {
   {cloud9 etherpad irslackd revealmd} -> npm
   vuls -> go
   tftpd -> xinetd  [penwidth=3]
-  {ara owncloud phpmyadmin} -> {buildtools php mysql}
+  {ara phpmyadmin} -> {buildtools php mysql}
   {php phpmyadmin roundcubemail} -> httpd [style=dashed penwidth=3]
   php -> remi
-  mediawiki -> httpd
+  {mediawiki owncloud} -> httpd
   {awx cntlm cloud9 dsvpn earlyoom httpd kernel phpmyadmin "python_pip" unbound vuls} -> buildtools
   roundcubemail -> php
   {cloud9 irslackd lynis revealmd sudo_pair vuls} -> git
