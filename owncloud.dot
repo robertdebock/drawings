@@ -8,11 +8,12 @@ digraph PhiloDilemma {
     mysql [fillcolor=yellow style=filled]
     "python_pip" [fillcolor=orange style=filled]
     php [fillcolor=orange style=filled]
-    httpd [fillcolor=red style=filled]
-    owncloud [fillcolor=purple style=filled penwidth=3]
+    openssl [fillcolor=red style=filled]
+    httpd [fillcolor=purple style=filled]
+    owncloud [fillcolor=blue style=filled penwidth=3]
   }
   {buildtools epel mysql php} -> bootstrap
   "python_pip" -> {buildtools epel}
-  httpd -> "python_pip"
+  httpd -> {"python_pip" openssl}
   owncloud -> {httpd mysql php}
 }
