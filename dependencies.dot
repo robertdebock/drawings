@@ -22,6 +22,7 @@ digraph hierarchy {
     buildtools [fillcolor=yellow style=filled]
     ca [fillcolor=yellow style=filled]
     ca_certificates [fillcolor=yellow style=filled]
+    certbot [fillcolor=blue style=filled]
     clamav [fillcolor=orange style=filled]
     cloud9 [fillcolor=red style=filled]
     cntlm [fillcolor=orange style=filled]
@@ -161,7 +162,7 @@ digraph hierarchy {
   vuls -> go
   tftpd -> xinetd  [penwidth=3]
   {ara phpmyadmin} -> {buildtools php mysql}
-  {php phpmyadmin roundcubemail} -> httpd [style=dashed penwidth=3]
+  {certbot php phpmyadmin roundcubemail} -> httpd [style=dashed penwidth=3]
   php -> remi
   {mediawiki owncloud} -> httpd
   {awx cntlm cloud9 dsvpn earlyoom httpd kernel phpmyadmin "python_pip" unbound vuls} -> buildtools
@@ -174,7 +175,7 @@ digraph hierarchy {
   spamassassin -> rsyslog [penwidth=3]
   gitlab_runner -> update
   roundcubemail -> selinux
-  {aide auto_update logrotate lynis} -> cron
+  {aide auto_update certbot logrotate lynis} -> cron
   obsproject -> rpmfusion
   minikube -> {kubectl docker}
   omsagent -> {auditd cron users}
