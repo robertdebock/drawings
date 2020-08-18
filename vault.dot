@@ -5,8 +5,9 @@ digraph PhiloDilemma {
     bootstrap [fillcolor=green style=filled]
     ca_certificates [fillcolor=yellow style=filled]
     core_dependencies [fillcolor=yellow style=filled]
+    service [fillcolor=yellow style=filled]
     vault [fillcolor=orange style=filled penwidth=3]
   }
-  vault -> {ca_certificates core_dependencies}
+  vault -> {ca_certificates core_dependencies service}
   {ca_certificates core_dependencies} -> bootstrap
 }
