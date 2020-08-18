@@ -3,7 +3,10 @@ digraph PhiloDilemma {
   overlap=false
   {
     bootstrap [fillcolor=green style=filled]
-    cis [fillcolor=yellow style=filled penwidth=3]
+    cron [fillcolor=yellow style=filled]
+    update [fillcolor=yellow style=filled]
+    cis [fillcolor=orange style=filled penwidth=3]
   }
-  cis -> bootstrap
+  cis -> {cron update}
+  {cron update} -> bootstrap
 }
