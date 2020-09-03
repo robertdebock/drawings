@@ -1,0 +1,21 @@
+digraph G {
+  seprank = 3
+  ratio = auto
+  label = "Robert de Bock" ;
+  overlap=false
+  {
+    node_red [fillcolor=green style=filled penwidth=3]
+    bootstrap [fillcolor=yellow style=filled]
+    ca_certificates [fillcolor=yellow style=filled]
+    epel [fillcolor=yellow style=filled]
+    npm [fillcolor=yellow style=filled]
+    service [fillcolor=yellow style=filled]
+    users [fillcolor=yellow style=filled]
+  }
+  node_red -> bootstrap
+  node_red -> ca_certificates
+  node_red -> epel
+  node_red -> npm
+  node_red -> service
+  node_red -> users
+}
