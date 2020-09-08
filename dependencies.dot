@@ -148,7 +148,7 @@ digraph hierarchy {
     users [fillcolor=yellow style=filled]
     vuls [fillcolor=orange style=filled]
     vagrant [fillcolor=red style=filled]
-    vdo [fillcolor=yello style=filled]
+    vdo [fillcolor=yellow style=filled]
     virtualbox [fillcolor=orange style=filled]
     xinetd [fillcolor=yellow style=filled]
     xrdp [fillcolor=yellow style=filled]
