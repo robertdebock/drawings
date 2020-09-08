@@ -171,7 +171,6 @@ digraph hierarchy {
   tftpd -> xinetd  [penwidth=3]
   {ara phpmyadmin} -> {buildtools php mysql}
   {certbot php phpmyadmin roundcubemail} -> httpd [style=dashed penwidth=3]
-  php -> remi
   {mediawiki nextcloud owncloud} -> httpd
   {awx cargo cntlm dsvpn earlyoom httpd kernel phpmyadmin "python_pip" unbound vuls} -> buildtools
   roundcubemail -> php
