@@ -24,13 +24,12 @@ digraph hierarchy {
     ca_certificates [fillcolor=yellow style=filled]
     cargo [fillcolor=orange style=filled]
     certbot [fillcolor=blue style=filled]
-    cis [fillcolor=yellow style=filled]
+    cis [fillcolor=red style=filled]
     clamav [fillcolor=orange style=filled]
-    cloud9 [fillcolor=red style=filled]
     cntlm [fillcolor=orange style=filled]
     collectd [fillcolor=orange style=filled]
     container_docs [fillcolor=yellow style=filled]
-    common [fillcolor=orange style=filled]
+    common [fillcolor=yellow style=filled]
     core_dependencies [fillcolor=yellow style=filled]
     cron [fillcolor=yellow style=filled]
     dhcpd [fillcolor=yellow style=filled]
@@ -108,9 +107,9 @@ digraph hierarchy {
     "python_pip" [fillcolor=orange style=filled]
     redis [fillcolor=yellow style=filled]
     reboot [fillcolor=yellow style=filled]
-    release [fillcolor=orange style=filled]
+    release [fillcolor=yellow style=filled]
     remi [fillcolor=orange style=filled]
-    revealmd [fillcolor=red style=filled]
+    revealmd [fillcolor=orange style=filled]
     restore [fillcolor=yellow style=filled]
     roundcubemail [fillcolor=blue style=filled]
     rpmfusion [fillcolor=orange style=filled]
@@ -132,7 +131,7 @@ digraph hierarchy {
     sysctl [fillcolor=yellow style=filled]
     sysstat [fillcolor=yellow style=filled]
     systemd [fillcolor=yellow style=filled]
-    terraform [fillcolor=yellow style=filled]
+    terraform [fillcolor=orange style=filled]
     test_connection [fillcolor=yellow style=filled]
     tlp [fillcolor=yellow style=filled]
     tftpd [fillcolor=orange style=filled]
@@ -148,10 +147,11 @@ digraph hierarchy {
     users [fillcolor=yellow style=filled]
     vuls [fillcolor=orange style=filled]
     vagrant [fillcolor=red style=filled]
+    vault [fillcolor=orange style=filled]
     vdo [fillcolor=yellow style=filled]
     virtualbox [fillcolor=orange style=filled]
     xinetd [fillcolor=yellow style=filled]
-    xrdp [fillcolor=yellow style=filled]
+    xrdp [fillcolor=orange style=filled]
     zabbix_repository [fillcolor=yellow style=filled]
     zabbix_agent [fillcolor=orange style=filled]
     zabbix_server [fillcolor=orange style=filled]
@@ -166,19 +166,19 @@ digraph hierarchy {
   travis -> ruby
   {ad_auth anaconda ansible_lint ara awx docker docker_ce httpd mitogen molecule openssl vagrant} -> "python_pip"
   {artifactory dns dsvpn docker eclipse haproxy snort sudo_pair squid spamassassin terraform tigervnc vault} -> "core_dependencies"
-  {cloud9 etherpad irslackd node_red revealmd} -> npm
+  {etherpad irslackd node_red revealmd} -> npm
   vuls -> go
   tftpd -> xinetd  [penwidth=3]
   {ara phpmyadmin} -> {buildtools php mysql}
   {certbot php phpmyadmin roundcubemail} -> httpd [style=dashed penwidth=3]
   php -> remi
   {mediawiki nextcloud owncloud} -> httpd
-  {awx cargo cntlm cloud9 dsvpn earlyoom httpd kernel phpmyadmin "python_pip" unbound vuls} -> buildtools
+  {awx cargo cntlm dsvpn earlyoom httpd kernel phpmyadmin "python_pip" unbound vuls} -> buildtools
   roundcubemail -> php
-  {cloud9 irslackd lynis revealmd sudo_pair vuls} -> git
+  {irslackd lynis revealmd sudo_pair vuls} -> git
   {"sudo_pair"} -> {buildtools}
   {artifactory eclipse jenkins rundeck tomcat} -> java
-  {ara anaconda artifactory cloud9 cntlm irslackd minikub node_red powertop rundeck snort tomcat unbound vault} -> service
+  {ara anaconda artifactory cntlm irslackd minikube node_red powertop rundeck snort tomcat unbound vault} -> service
   tomcat -> haveged
   spamassassin -> rsyslog [penwidth=3]
   {cis gitlab_runner} -> update
