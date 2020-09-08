@@ -90,7 +90,7 @@ digraph hierarchy {
     natrouter [fillcolor=orange style=filled]
     nextcloud [fillcolor=purple style=filled]
     nginx [fillcolor=orange style=filled]
-    node_red [fillcolor=blue] style=filled]
+    node_red [fillcolor=blue style=filled]
     npm [fillcolor=orange style=filled]
     ntp [fillcolor=yellow style=filled]
     obsproject [fillcolor=red style=filled]
