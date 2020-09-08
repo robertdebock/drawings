@@ -88,6 +88,7 @@ digraph hierarchy {
     mssql [fillcolor=yellow style=filled]
     mysql [fillcolor=yellow style=filled]
     natrouter [fillcolor=orange style=filled]
+    nextcloud [fillcolor=purple style=filled]
     nginx [fillcolor=orange style=filled]
     node_red [fillcolor=blue] style=filled]
     npm [fillcolor=orange style=filled]
@@ -171,7 +172,7 @@ digraph hierarchy {
   {ara phpmyadmin} -> {buildtools php mysql}
   {certbot php phpmyadmin roundcubemail} -> httpd [style=dashed penwidth=3]
   php -> remi
-  {mediawiki owncloud} -> httpd
+  {mediawiki nextcloud owncloud} -> httpd
   {awx cargo cntlm cloud9 dsvpn earlyoom httpd kernel phpmyadmin "python_pip" unbound vuls} -> buildtools
   roundcubemail -> php
   {cloud9 irslackd lynis revealmd sudo_pair vuls} -> git
