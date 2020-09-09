@@ -6,9 +6,10 @@ digraph PhiloDilemma {
     buildtools [fillcolor=yellow style=filled]
     epel [fillcolor=yellow style=filled]
     "python_pip" [fillcolor=orange style=filled]
+    selinux [fillcolor=orange style=filled]
     httpd [fillcolor=red style=filled penwidth=3]
   }
   {buildtools epel} -> bootstrap
   "python_pip" -> {buildtools epel}
-  httpd -> "python_pip"
+  httpd -> {"python_pip" selinux}
 }

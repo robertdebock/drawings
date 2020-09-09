@@ -10,10 +10,11 @@ digraph PhiloDilemma {
     php [fillcolor=orange style=filled]
     httpd [fillcolor=red style=filled]
     phpmyadmin [fillcolor=purple style=filled penwidth=3]
+    selinux [fillcolor=orange style=filled penwidth=3]
   }
   {buildtools epel mysql php} -> bootstrap
   "python_pip" -> {buildtools epel}
-  httpd -> "python_pip"
+  httpd -> {"python_pip" selinux}
   phpmyadmin -> {mysql php}
   phpmyadmin -> httpd [penwidth=3]
 }
