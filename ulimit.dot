@@ -3,7 +3,7 @@ digraph PhiloDilemma {
   overlap=false
   {
     bootstrap [fillcolor=green style=filled]
-    ulimit [fillcolor=yellow style=filled penwidth=3]
+    umask [fillcolor=yellow style=filled penwidth=3]
   }
-  ulimit -> bootstrap
+  umask -> bootstrap
 }
