@@ -91,6 +91,7 @@ digraph hierarchy {
     mysql [fillcolor=yellow style=filled]
     natrouter [fillcolor=orange style=filled]
     nextcloud [fillcolor=purple style=filled]
+    nfsserver [fillcolor=yellow style=filled]
     nginx [fillcolor=orange style=filled]
     node_red [fillcolor=blue style=filled]
     npm [fillcolor=orange style=filled]
@@ -164,7 +165,7 @@ digraph hierarchy {
     zabbix_web [fillcolor=orange style=filled]
     zabbix_proxy [fillcolor=orange style=filled]
   }
-  {alternatives ansible apt_autostart at atom auditd autofs backup bios_update buildtools ca ca_certificates common container_docs core_dependencies cron debug desktop dnsmasq dhcpd "digitalocean_agent" dovecot environment epel facts firewall forensics functions git glusterfs gnome grub go gotop hostname image_builder investigate java kubectl libvirt logwatch locale maintenance mate memcached modprobe mount mysql mssql ntp openssh packer postgres powertools reboot redis release restore rsyslog ruby scl selinux service software sosreport storage stratis subversion sysctl sysstat systemd test_connection tune2fs types update_package_cache ulimit umask unowned_files users vdo xinetd zabbix_repository} -> bootstrap
+  {alternatives ansible apt_autostart at atom auditd autofs backup bios_update buildtools ca ca_certificates common container_docs core_dependencies cron debug desktop dnsmasq dhcpd "digitalocean_agent" dovecot environment epel facts firewall forensics functions git glusterfs gnome grub go gotop hostname image_builder investigate java kubectl libvirt logwatch locale maintenance mate memcached modprobe mount mysql mssql nfsserver ntp openssh packer postgres powertools reboot redis release restore rsyslog ruby scl selinux service software sosreport storage stratis subversion sysctl sysstat systemd test_connection tune2fs types update_package_cache ulimit umask unowned_files users vdo xinetd zabbix_repository} -> bootstrap
   {ansible cargo clamav collectd fail2ban haveged nginx npm phpmyadmin "python_pip" remi rpmfusion snort "sudo_pair" tlp xrdp} -> epel
   update -> reboot
   {zabbix_agent zabbix_server zabbix_web zabbix_proxy} -> zabbix_repository
