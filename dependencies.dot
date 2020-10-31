@@ -62,6 +62,7 @@ digraph hierarchy {
     gotop [fillcolor=yellow style=filled]
     haveged [fillcolor=orange style=filled]
     haproxy [fillcolor=orange style=filled]
+    hashicorp [fillcolor=orange style=filled]
     httpd [fillcolor=red style=filled]
     hostname [fillcolor=yellow style=filled]
     "image_builder" [fillcolor=yellow style=filled]
@@ -172,7 +173,7 @@ digraph hierarchy {
   postfix -> {spamassassin clamav} [style=dashed]
   travis -> ruby
   {ad_auth anaconda ansible_lint ara awx docker docker_ce httpd mitogen molecule openssl vagrant} -> "python_pip"
-  {artifactory dns dsvpn docker eclipse haproxy snort sudo_pair squid spamassassin terraform tigervnc vault} -> "core_dependencies"
+  {artifactory dns dsvpn docker eclipse haproxy hashicorp snort sudo_pair squid spamassassin terraform tigervnc vault} -> "core_dependencies"
   {etherpad irslackd node_red revealmd} -> npm
   vuls -> go
   tftpd -> xinetd  [penwidth=3]
