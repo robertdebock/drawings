@@ -95,6 +95,7 @@ digraph hierarchy {
     nfsserver [fillcolor=yellow style=filled]
     nginx [fillcolor=orange style=filled]
     node_red [fillcolor=blue style=filled]
+    nomad [fillcolor=purple style=filled]
     npm [fillcolor=orange style=filled]
     ntp [fillcolor=yellow style=filled]
     obsproject [fillcolor=red style=filled]
@@ -193,6 +194,7 @@ digraph hierarchy {
   {aide auto_update certbot cis logrotate lynis} -> cron
   obsproject -> rpmfusion
   minikube -> {kubectl docker}
+  nomad -> docker
   omsagent -> {auditd cron users}
   tigervnc -> {desktop users}
   {jitsi "microsoft_repository_keys" terraform vault virtualbox} -> "ca_certificates"
