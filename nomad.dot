@@ -10,5 +10,5 @@ digraph PhiloDilemma {
   }
   {"core_dependencies" service} -> bootstrap
   hashicorp -> "core_dependencies"
-  nomad -> hashicorp
+  nomad -> {hashicorp service}
 }
