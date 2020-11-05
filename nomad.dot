@@ -5,10 +5,9 @@ digraph PhiloDilemma {
     bootstrap [fillcolor=green style=filled]
     "core_dependencies" [fillcolor=yellow style=filled]
     hashicorp [fillcolor=orange style=filled]
-    service [fillcolor=orange style=filled]
     nomad [fillcolor=red style=filled penwidth=3]
   }
   {"core_dependencies" service} -> bootstrap
   hashicorp -> "core_dependencies"
-  nomad -> {hashicorp service}
+  nomad -> hashicorp
 }
