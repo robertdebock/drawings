@@ -4,16 +4,11 @@ digraph PhiloDilemma {
   {
     bootstrap [fillcolor=green style=filled]
     "core_dependencies" [fillcolor=yellow style=filled]
-    buildtools [fillcolor=yellow style=filled]
-    epel [fillcolor=yellow style=filled]
-    "python_pip" [fillcolor=orange style=filled]
-    docker [fillcolor=red style=filled]
     hashicorp [fillcolor=orange style=filled]
-    nomad [fillcolor=purple style=filled penwidth=3]
+    service [fillcolor=orange style=filled]
+    nomad [fillcolor=red style=filled penwidth=3]
   }
-  {buildtools "core_dependencies" epel} -> bootstrap
-  "python_pip" -> {buildtools epel}
-  docker -> "python_pip"
+  {"core_dependencies" service} -> bootstrap
   hashicorp -> "core_dependencies"
   nomad -> hashicorp
 }
