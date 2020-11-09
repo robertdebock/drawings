@@ -8,10 +8,11 @@ digraph PhiloDilemma {
     "python_pip" [fillcolor=orange style=filled]
     php [fillcolor=orange style=filled]
     httpd [fillcolor=red style=filled]
+    mysql [fillcolor=orange style=filled]
     mediawiki [fillcolor=purple style=filled penwidth=3]
   }
   {buildtools epel php} -> bootstrap
   "python_pip" -> {buildtools epel}
   httpd -> "python_pip"
-  mediawiki -> {httpd php}
+  mediawiki -> {httpd php mysql}
 }

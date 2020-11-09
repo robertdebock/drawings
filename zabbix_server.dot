@@ -4,8 +4,9 @@ digraph PhiloDilemma {
   {
     bootstrap [fillcolor=green style=filled]
     zabbix_repository [fillcolor=yellow style=filled]
+    mysql [fillcolor=orange style=filled]
     zabbix_server [fillcolor=orange style=filled penwidth=3]
   }
   zabbix_repository -> bootstrap
-  zabbix_server -> zabbix_repository
+  zabbix_server -> {mysql zabbix_repository}
 }

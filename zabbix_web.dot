@@ -7,9 +7,11 @@ digraph PhiloDilemma {
     buildtools [fillcolor=yellow style=filled]
     python_pip [fillcolor=orange style=filled]
     zabbix_repository [fillcolor=yellow style=filled]
+    mysql [fillcolor=orange style=filled]
     zabbix_web [fillcolor=red style=filled penwidth=3]
   }
   {buildtools epel zabbix_repository} -> bootstrap
+  zabbix_server -> mysql
   zabbix_web -> {zabbix_repository python_pip}
   python_pip -> {buildtools epel}
 }

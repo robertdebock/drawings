@@ -3,7 +3,9 @@ digraph PhiloDilemma {
   overlap=false
   {
     bootstrap [fillcolor=green style=filled]
-    backup [fillcolor=yellow style=filled penwidth=3]
+    mysql [fillcolor=yellow style=filled]
+    backup [fillcolor=orange style=filled penwidth=3]
   }
-  backup -> bootstrap
+  backup -> mysql
+  mysql -> bootstrap
 }

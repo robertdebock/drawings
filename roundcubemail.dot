@@ -11,12 +11,13 @@ digraph PhiloDilemma {
     roundcubemail [fillcolor=purple style=filled penwidth=3]
     selinux [fillcolor=orange style=filled]
     reboot [fillcolor=yellow style=filled]
+    mysql [fillcolor=orange style=filled]
   }
   {buildtools epel} -> bootstrap
   "python_pip" -> {buildtools epel}
   httpd -> "python_pip"
   roundcubemail -> {epel php}
   roundcubemail -> httpd [penwidth=3]
-  roundcubemail -> selinux
+  roundcubemail -> {selinux mysql}
   selinux -> reboot
 }
