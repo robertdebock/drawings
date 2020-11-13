@@ -8,6 +8,7 @@ digraph PhiloDilemma {
     epel [fillcolor=yellow style=filled]
     "python_pip" [fillcolor=orange style=filled]
     php [fillcolor=orange style=filled]
+    mysql [fillcolor=yellow style=filled]
     openssl [fillcolor=red style=filled]
     httpd [fillcolor=purple style=filled]
     certbot [fillcolor=blue style=filled penwidth=3]
