@@ -4,8 +4,9 @@ digraph PhiloDilemma {
   {
     bootstrap [fillcolor=green style=filled]
     epel [fillcolor=yellow style=filled penwidth=3]
+    "core_dependencies" [fillcolor=yellow style=filled penwidth=3]
     xrdp [fillcolor=orange style=filled penwidth=3]
   }
-  xrdp -> epel
+  xrdp -> {epel "core_dependencies"}
   epel -> bootstrap
 }
