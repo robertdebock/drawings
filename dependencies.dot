@@ -105,6 +105,7 @@ digraph hierarchy {
     omsagent [fillcolor=orange style=filled]
     openssh [fillcolor=yellow style=filled]
     openssl [fillcolor=red style=filled]
+    openvpn [fillcolor=yellow style=filled]
     owncloud [fillcolor=purple style=filled]
     packer [fillcolor=yellow style=filled]
     php [fillcolor=purple style=filled]
@@ -171,7 +172,7 @@ digraph hierarchy {
     zabbix_web [fillcolor=orange style=filled]
     zabbix_proxy [fillcolor=orange style=filled]
   }
-  {alternatives ansible apt_autostart apt_repository at atom auditd autofs backup bios_update buildtools ca ca_certificates common container_docs core_dependencies cron cups debug desktop dnsmasq dhcpd "digitalocean_agent" "docker_compose" dovecot environment epel facts firewall forensics functions git glusterfs gnome grub go gotop hostname investigate java keepalived kubectl libvirt logwatch locale maintenance mate memcached modprobe mount mysql mssql nfsserver ntp openssh packer postgres powertools qemu reboot redis release restore rsyslog ruby scl selinux service software sosreport storage stratis subversion sysctl sysstat systemd test_connection tftpd tune2fs types update_package_cache ulimit umask unowned_files users vdo xinetd zabbix_repository} -> bootstrap
+  {alternatives ansible apt_autostart apt_repository at atom auditd autofs backup bios_update buildtools ca ca_certificates common container_docs core_dependencies cron cups debug desktop dnsmasq dhcpd "digitalocean_agent" "docker_compose" dovecot environment epel facts firewall forensics functions git glusterfs gnome grub go gotop hostname investigate java keepalived kubectl libvirt logwatch locale maintenance mate memcached modprobe mount mysql mssql nfsserver ntp openssh openvpn packer postgres powertools qemu reboot redis release restore rsyslog ruby scl selinux service software sosreport storage stratis subversion sysctl sysstat systemd test_connection tftpd tune2fs types update_package_cache ulimit umask unowned_files users vdo xinetd zabbix_repository} -> bootstrap
   {ansible cargo clamav collectd fail2ban haveged nginx npm phpmyadmin "python_pip" remi rpmfusion snort "sudo_pair" tlp xrdp} -> epel
   update -> reboot
   {zabbix_agent zabbix_server zabbix_web zabbix_proxy} -> zabbix_repository
