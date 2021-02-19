@@ -1,7 +1,6 @@
 digraph hierarchy {
   label = "Robert de Bock" ;
   {
-    ad_auth [fillcolor=red style=filled]
     aide [fillcolor=orange style=filled]
     alternatives [fillcolor=yellow style=filled]
     anaconda [fillcolor=red style=filled]
@@ -178,7 +177,7 @@ digraph hierarchy {
   {zabbix_agent zabbix_server zabbix_web zabbix_proxy} -> zabbix_repository
   postfix -> {spamassassin clamav} [style=dashed]
   travis -> ruby
-  {ad_auth anaconda ansible_lint ara awx docker docker_ce httpd mitogen molecule openssl vagrant} -> "python_pip"
+  {anaconda ansible_lint ara awx docker docker_ce httpd mitogen molecule openssl vagrant} -> "python_pip"
   {artifactory dns dsvpn docker eclipse haproxy hashicorp snort sudo_pair squid spamassassin terraform tigervnc vault} -> "core_dependencies"
   {etherpad irslackd node_red revealmd} -> npm
   vuls -> go
